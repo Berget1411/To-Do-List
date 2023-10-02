@@ -1,0 +1,85 @@
+@use "index";
+
+/* Sidebar general */
+.sidebar {
+  grid-area: sidebar;
+  padding: 40px;
+  background-color: var(--secondary-color);
+  border-right: 1px solid var(--gray-color);
+
+  h2 {
+    color: var(--gray-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Sidebar top */
+.sidebar-top {
+  margin-bottom: 100px;
+  img {
+    filter: var(--primary-color-svg);
+    width: 22px;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+      font-size: 2.1em;
+    }
+
+    img {
+      width: 34px;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translate(5px);
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  .create-project {
+    @include index.flex-center;
+    gap: 10px;
+    @include index.button-styling;
+
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+
+    transition: background-color 0.3s;
+
+    img {
+      width: 18px;
+      border: 2px solid var(--primary-color);
+      border-radius: 100%;
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
