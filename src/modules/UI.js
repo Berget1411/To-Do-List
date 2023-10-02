@@ -10,17 +10,50 @@ const task1 = new Task("task1", "description1", "dueDate1", "priority1");
 project1.addTask(task1);
 toDoList.addProject(project1);
 
+//handle tasks
+
 const toggleAddTask = () => {
   document.querySelector("#add-task-popup").classList.toggle("active");
   document.querySelector(".overlay").classList.toggle("active");
 };
 
-//handle tasks
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", toggleAddTask);
 
 const closeAddTaskPopup = document.querySelector("#close-add-task-popup");
 closeAddTaskPopup.addEventListener("click", toggleAddTask);
+
+const clearAddTaskForm = () => {
+  document.querySelector("#input-add-task-title").value = "";
+  document.querySelector("#input-add-task-descrip").value = "";
+  document.querySelector("#input-add-task-due-date").value = "";
+  document.querySelector("#input-add-task-priority").value = "";
+};
+
+const addTaskForm = document.querySelector("#add-task-popup form");
+const createTask = (e) => {
+  e.preventDefault();
+  const currentProject = document.querySelector(".header-left h2").textContent;
+  const taskTitle = document.querySelector("#input-add-task-title").value;
+  const taskDescription = document.querySelector(
+    "#input-add-task-descrip"
+  ).value;
+  const taskDueDate = document.querySelector("#input-add-task-due-date").value;
+  const taskPriority = document.querySelector("#input-add-task-priority").value;
+
+  const newTask = new Task(
+    taskTitle,
+    taskDescription,
+    taskDueDate,
+    taskPriority
+  );
+  toDoList.getProject(currentProject).addTask(newTask);
+  console.log(toDoList.projects[0].getTasks());
+
+  clearAddTaskForm();
+  toggleAddTask();
+};
+addTaskForm.addEventListener("submit", createTask);
 
 //
 
