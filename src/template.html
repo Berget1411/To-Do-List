@@ -122,7 +122,11 @@
       </div>
       <form action="">
         <label for="input-add-task-title">Title</label>
-        <input type="text" id="input-add-task-title" required />
+        <input
+          type="text"
+          id="input-add-task-title"
+          placeholder="e.g. Grocery Shopping"
+        />
         <label for="input-add-task-descrip">Description</label>
         <textarea
           id="input-add-task-descrip"
@@ -130,6 +134,7 @@
           minlength="5"
           ,
           maxlength="210"
+          placeholder="e.g. Go to the nearest supermarket and buy food, household items, and other necessities for the coming week."
           required
         ></textarea>
         <label for="input-add-task-due-date">Due Date</label>
