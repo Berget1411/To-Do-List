@@ -6,10 +6,48 @@ import ToDoList from "./todolist";
 
 const toDoList = new ToDoList();
 const project1 = new Project("project1");
-const task1 = new Task("task1", "description1", "dueDate1", "priority1");
+const task1 = new Task("task1", "description1", "2023-10-05", "low");
+const task2 = new Task("task2", "description2", "2023-10-06", "high");
 project1.addTask(task1);
+project1.addTask(task2);
 toDoList.addProject(project1);
 
+//
+
+const renderTasks = () => {
+  const todoTasks = document.querySelector("#todo ul");
+  const doneTasks = document.querySelector("#done ul");
+  const currentProject = document.querySelector(".header-left h2").textContent;
+  document.querySelector("#task-display").classList.remove("not-active");
+
+  const tasks = toDoList.getProject(currentProject).getTasks();
+
+  tasks.forEach((task) => {
+    const taskContainer = document.createElement("li");
+    taskContainer.classList.add("task-container");
+
+    const taskTitle = document.createElement("h4");
+    taskTitle.textContent = task.getTitle();
+
+    const taskFooter = document.createElement("div");
+    taskFooter.classList.add("task-footer");
+    const taskPriority = document.createElement("div");
+    taskPriority.classList.add("task-priority");
+    taskPriority.textContent = task.getPriority();
+    const taskDueDate = document.createElement("div");
+    taskDueDate.classList.add("task-due-date");
+    taskDueDate.textContent = task.getDate();
+    taskFooter.append(taskPriority, taskDueDate);
+
+    taskContainer.append(taskTitle, taskFooter);
+
+    if (task.isCompleted == false) {
+      todoTasks.append(taskContainer);
+    } else {
+      doneTasks.append(taskContainer);
+    }
+  });
+};
 //handle tasks
 
 const toggleAddTask = () => {
@@ -108,6 +146,8 @@ const openProject = (e) => {
 
   const headerTitle = document.querySelector("header h2");
   headerTitle.textContent = currentProject;
+
+  renderTasks();
 };
 
 const renderProjects = () => {
