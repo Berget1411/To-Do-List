@@ -10,6 +10,20 @@ const task1 = new Task("task1", "description1", "dueDate1", "priority1");
 project1.addTask(task1);
 toDoList.addProject(project1);
 
+const toggleAddTask = () => {
+  document.querySelector("#add-task-popup").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+};
+
+//handle tasks
+const addTaskButton = document.querySelector(".add-task-button");
+addTaskButton.addEventListener("click", toggleAddTask);
+
+const closeAddTaskPopup = document.querySelector("#close-add-task-popup");
+closeAddTaskPopup.addEventListener("click", toggleAddTask);
+
+//
+
 //handle projects
 
 const deleteProject = () => {
