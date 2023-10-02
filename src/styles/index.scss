@@ -72,3 +72,14 @@ video {
 .not-active {
   display: none;
 }
+
+.content {
+  min-height: 100vh;
+  background-color: var(--third-color);
+
+  display: grid;
+  grid-template:
+    "sidebar header" 100px
+    "sidebar main" 1fr
+    / 300px 1fr;
+}
