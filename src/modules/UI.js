@@ -10,6 +10,17 @@ const task1 = new Task("task1", "description1", "dueDate1", "priority1");
 project1.addTask(task1);
 toDoList.addProject(project1);
 
+//handle projects
+const openProject = (e) => {
+  const addTaskButton = document.querySelector(".add-task-button");
+  addTaskButton.classList.remove("not-active");
+  const editProjectButton = document.querySelector(".edit-project-button");
+  editProjectButton.classList.remove("not-active");
+
+  const headerTitle = document.querySelector("header h2");
+  headerTitle.textContent = e.target.textContent;
+};
+
 const renderProjects = () => {
   const projectsTitle = document.querySelector(".projects-title");
   projectsTitle.textContent = `PROJECTS (${toDoList.projects.length})`;
@@ -23,6 +34,8 @@ const renderProjects = () => {
     const projectName = document.createElement("p");
     projectName.textContent = project.getName();
     projectContainer.append(projectIcon, projectName);
+
+    projectContainer.addEventListener("click", openProject);
 
     projectsList.append(projectContainer);
   });
@@ -59,6 +72,9 @@ const createProject = (e) => {
 };
 createProjectForm.addEventListener("submit", createProject);
 
+//
+
+//collapse sidebar
 const collapseButton = document.querySelector(".collapse");
 const toggleSidebar = () => {
   document.querySelector(".sidebar").classList.toggle("not-active");
@@ -69,3 +85,4 @@ const toggleSidebar = () => {
   hamburgerMenu.addEventListener("click", toggleSidebar);
 };
 collapseButton.addEventListener("click", toggleSidebar);
+//
