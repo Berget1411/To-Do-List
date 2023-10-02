@@ -139,10 +139,8 @@ const createProjectButton = document.querySelector(".create-project");
 const createProjectForm = document.querySelector("#add-project-popup form");
 
 const AddProjectToggle = () => {
-  const addProjectPopup = document.querySelector("#add-project-popup");
-  addProjectPopup.classList.toggle("active");
-  const overlay = document.querySelector(".overlay");
-  overlay.classList.toggle("active");
+  document.querySelector("#add-project-popup").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
 };
 
 createProjectButton.addEventListener("click", AddProjectToggle);
