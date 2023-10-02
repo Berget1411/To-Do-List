@@ -11,14 +11,53 @@ project1.addTask(task1);
 toDoList.addProject(project1);
 
 //handle projects
+
+const deleteProject = () => {
+  const currentProject = document.querySelector(".header-left h2").textContent;
+
+  toDoList.removeProject(currentProject);
+
+  document.querySelector(".header-left h2").textContent = ""; // update header
+  editProjectToggle(); // close pop up
+  renderProjects(); // update sidebar
+
+  document.querySelector(".add-task-button").classList.add("not-active");
+  document.querySelector(".edit-project-button").classList.add("not-active");
+};
+
+const deleteProjectButton = document.querySelector(".delete-project");
+deleteProjectButton.addEventListener("click", deleteProject);
+
+const editProjectToggle = () => {
+  document.querySelector("#edit-project-popup").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+  document.querySelector("#edit-project-input").value =
+    document.querySelector(".header-left h2").textContent;
+};
+
+const editProjectForm = document.querySelector("#edit-project-popup form");
+const editProject = (e) => {
+  e.preventDefault();
+  const currentProject = document.querySelector(".header-left h2").textContent;
+  const newName = document.querySelector("#edit-project-input").value;
+
+  toDoList.getProject(currentProject).setName(newName);
+  document.querySelector(".header-left h2").textContent = newName; // update header
+  editProjectToggle(); // close pop up
+  renderProjects(); // update sidebar
+};
+editProjectForm.addEventListener("submit", editProject);
+
 const openProject = (e) => {
+  const currentProject = e.target.classList;
   const addTaskButton = document.querySelector(".add-task-button");
   addTaskButton.classList.remove("not-active");
   const editProjectButton = document.querySelector(".edit-project-button");
   editProjectButton.classList.remove("not-active");
+  editProjectButton.addEventListener("click", editProjectToggle);
 
   const headerTitle = document.querySelector("header h2");
-  headerTitle.textContent = e.target.textContent;
+  headerTitle.textContent = currentProject;
 };
 
 const renderProjects = () => {
@@ -29,10 +68,13 @@ const renderProjects = () => {
 
   toDoList.projects.forEach((project) => {
     const projectContainer = document.createElement("li");
+    projectContainer.classList.add(project.getName());
     const projectIcon = document.createElement("img");
     projectIcon.src = projectIconSrc;
+    projectIcon.classList.add(project.getName());
     const projectName = document.createElement("p");
     projectName.textContent = project.getName();
+    projectName.classList.add(project.getName());
     projectContainer.append(projectIcon, projectName);
 
     projectContainer.addEventListener("click", openProject);
