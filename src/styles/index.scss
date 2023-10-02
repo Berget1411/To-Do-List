@@ -78,6 +78,7 @@ video {
 .content {
   min-height: 100vh;
   background-color: var(--third-color);
+  font-family: "Roboto", sans-serif;
 
   display: grid;
   grid-template:
@@ -88,4 +89,8 @@ video {
 
 .hide-sidebar {
   grid-template: "header header" 100px "main main" 1fr / 300px 1fr !important;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
 }
