@@ -58,3 +58,14 @@ const createProject = (e) => {
   AddProjectToggle();
 };
 createProjectForm.addEventListener("submit", createProject);
+
+const collapseButton = document.querySelector(".collapse");
+const toggleSidebar = () => {
+  document.querySelector(".sidebar").classList.toggle("not-active");
+  document.querySelector(".content").classList.toggle("hide-sidebar");
+
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  hamburgerMenu.classList.toggle("not-active");
+  hamburgerMenu.addEventListener("click", toggleSidebar);
+};
+collapseButton.addEventListener("click", toggleSidebar);
