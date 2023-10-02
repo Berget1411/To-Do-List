@@ -1,0 +1,16 @@
+@mixin icon-size($pixel) {
+  height: $pixel;
+  width: $pixel;
+}
+
+@mixin button-styling {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
