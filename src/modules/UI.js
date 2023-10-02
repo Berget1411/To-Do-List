@@ -48,6 +48,9 @@ const editProject = (e) => {
 };
 editProjectForm.addEventListener("submit", editProject);
 
+const closeEditProjectForm = document.querySelector(".close-edit-project-form");
+closeEditProjectForm.addEventListener("click", editProjectToggle);
+
 const openProject = (e) => {
   const currentProject = e.target.classList;
   const addTaskButton = document.querySelector(".add-task-button");
