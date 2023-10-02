@@ -82,6 +82,19 @@
       </header>
       <main class="task-display"></main>
     </section>
-    <section class="overlay"></section>
+    <section class="popup not-active" id="add-project-popup">
+      <div class="popup-header">
+        <h2>Create New Project</h2>
+        <button>
+          <img src="assets/images/close.svg" alt="close" />
+        </button>
+      </div>
+      <form action="">
+        <label for="project-title-input">Title</label>
+        <input type="text" id="project-title-input" required />
+        <input type="submit" value="Create Project" class="submit-form" />
+      </form>
+    </section>
+    <section class="overlay not-active"></section>
   </body>
 </html>
