@@ -57,19 +57,21 @@ form {
     margin-bottom: 8px;
     font-size: 0.9em;
   }
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-color);
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
 }
 
-input[type="text"] {
-  padding: 9px;
-  border-radius: 5px;
-  border: 1px solid var(--gray-color);
-  margin-bottom: 20px;
-  font-size: 0.9em;
-}
-
-input[type="text"]:focus {
+input:focus {
   outline: none;
-  padding: 8px;
+  padding: 9px;
+  cursor: pointer;
   border: 2px solid var(--primary-color);
 }
 
