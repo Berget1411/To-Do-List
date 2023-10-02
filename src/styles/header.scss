@@ -1,0 +1,65 @@
+@use "index";
+
+header {
+  grid-area: header;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--gray-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+
+  h2 {
+    font-size: 1.8em;
+  }
+  .hamburger-menu {
+    background-color: var(--primary-button-color);
+    border-radius: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--primary-button-hover-color);
+    }
+  }
+  img {
+    width: 25px;
+
+    filter: var(--white-color-svg);
+  }
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+
+  .add-task-button {
+    @include index.flex-center;
+
+    background-color: var(--secondary-button-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--secondary-button-hover-color);
+    }
+  }
+
+  .edit-project-button {
+    background-color: var(--primary-button-color);
+    border-radius: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--primary-button-hover-color);
+    }
+  }
+}
