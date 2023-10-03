@@ -98,6 +98,7 @@ const createTask = (e) => {
   toDoList.getProject(currentProject).addTask(newTask);
   console.log(toDoList.projects[0].getTasks());
 
+  renderTasks();
   clearAddTaskForm();
   toggleAddTask();
 };
