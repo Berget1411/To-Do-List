@@ -19,12 +19,11 @@ project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
 
-//
-
-const toggleTask = () => {
-  document.querySelector("#opened-task").classList.toggle("active");
+const togglePopup = (elementId) => {
+  document.querySelector(elementId).classList.toggle("active");
   document.querySelector(".overlay").classList.toggle("active");
 };
+//
 
 const openTask = (taskName) => {
   const currentProject = document.querySelector(".header-left h2").textContent;
@@ -56,11 +55,11 @@ const openTask = (taskName) => {
   priorityIcon.classList = "";
   priorityIcon.classList.add(task.getPriority());
 
-  document
-    .querySelector("#opened-task-close")
-    .addEventListener("click", toggleTask);
+  document.querySelector("#opened-task-close").addEventListener("click", () => {
+    togglePopup("#opened-task");
+  });
 
-  toggleTask();
+  togglePopup("#opened-task");
 };
 
 const renderTasks = () => {
@@ -112,16 +111,15 @@ const renderTasks = () => {
 };
 //handle tasks
 
-const toggleAddTask = () => {
-  document.querySelector("#add-task-popup").classList.toggle("active");
-  document.querySelector(".overlay").classList.toggle("active");
-};
-
 const addTaskButton = document.querySelector(".add-task-button");
-addTaskButton.addEventListener("click", toggleAddTask);
+addTaskButton.addEventListener("click", () => {
+  togglePopup("#add-task-popup");
+});
 
 const closeAddTaskPopup = document.querySelector("#close-add-task-popup");
-closeAddTaskPopup.addEventListener("click", toggleAddTask);
+closeAddTaskPopup.addEventListener("click", () => {
+  togglePopup("#add-task-popup");
+});
 
 const clearAddTaskForm = () => {
   document.querySelector("#input-add-task-title").value = "";
@@ -152,7 +150,7 @@ const createTask = (e) => {
 
   renderTasks();
   clearAddTaskForm();
-  toggleAddTask();
+  togglePopup("#add-task-popup");
 };
 addTaskForm.addEventListener("submit", createTask);
 
@@ -166,7 +164,7 @@ const deleteProject = () => {
   toDoList.removeProject(currentProject);
 
   document.querySelector(".header-left h2").textContent = ""; // update header
-  editProjectToggle(); // close pop up
+  togglePopup("#edit-project-popup"); // close pop up
   renderProjects(); // update sidebar
   document.querySelector("#task-display").classList.toggle("not-active");
 
@@ -177,13 +175,6 @@ const deleteProject = () => {
 const deleteProjectButton = document.querySelector(".delete-project");
 deleteProjectButton.addEventListener("click", deleteProject);
 
-const editProjectToggle = () => {
-  document.querySelector("#edit-project-popup").classList.toggle("active");
-  document.querySelector(".overlay").classList.toggle("active");
-  document.querySelector("#edit-project-input").value =
-    document.querySelector(".header-left h2").textContent;
-};
-
 const editProjectForm = document.querySelector("#edit-project-popup form");
 const editProject = (e) => {
   e.preventDefault();
@@ -192,13 +183,15 @@ const editProject = (e) => {
 
   toDoList.getProject(currentProject).setName(newName);
   document.querySelector(".header-left h2").textContent = newName; // update header
-  editProjectToggle(); // close pop up
+  togglePopup("#edit-project-popup"); // close pop up
   renderProjects(); // update sidebar
 };
 editProjectForm.addEventListener("submit", editProject);
 
 const closeEditProjectForm = document.querySelector(".close-edit-project-form");
-closeEditProjectForm.addEventListener("click", editProjectToggle);
+closeEditProjectForm.addEventListener("click", () => {
+  togglePopup("#edit-project-popup");
+});
 
 const openProject = (e) => {
   const currentProject = e.target.classList;
@@ -206,7 +199,9 @@ const openProject = (e) => {
   addTaskButton.classList.remove("not-active");
   const editProjectButton = document.querySelector(".edit-project-button");
   editProjectButton.classList.remove("not-active");
-  editProjectButton.addEventListener("click", editProjectToggle);
+  editProjectButton.addEventListener("click", () => {
+    togglePopup("#edit-project-popup");
+  });
 
   const headerTitle = document.querySelector(".header-left h2");
   headerTitle.textContent = currentProject;
@@ -242,16 +237,15 @@ renderProjects();
 const createProjectButton = document.querySelector(".create-project");
 const createProjectForm = document.querySelector("#add-project-popup form");
 
-const AddProjectToggle = () => {
-  document.querySelector("#add-project-popup").classList.toggle("active");
-  document.querySelector(".overlay").classList.toggle("active");
-};
-
-createProjectButton.addEventListener("click", AddProjectToggle);
+createProjectButton.addEventListener("click", () => {
+  togglePopup("#add-project-popup");
+});
 
 const closeAddProjectForm = document.querySelector(".close-add-project-form");
 
-closeAddProjectForm.addEventListener("click", AddProjectToggle);
+closeAddProjectForm.addEventListener("click", () => {
+  togglePopup("#add-project-popup");
+});
 
 const createProject = (e) => {
   e.preventDefault();
@@ -262,7 +256,7 @@ const createProject = (e) => {
   renderProjects();
 
   document.querySelector("#add-project-input").value = "";
-  AddProjectToggle();
+  togglePopup("#add-project-popup");
 };
 createProjectForm.addEventListener("submit", createProject);
 
