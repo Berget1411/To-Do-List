@@ -115,6 +115,7 @@ const deleteProject = () => {
   document.querySelector(".header-left h2").textContent = ""; // update header
   editProjectToggle(); // close pop up
   renderProjects(); // update sidebar
+  document.querySelector("#task-display").classList.toggle("not-active");
 
   document.querySelector(".add-task-button").classList.add("not-active");
   document.querySelector(".edit-project-button").classList.add("not-active");
