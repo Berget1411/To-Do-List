@@ -161,7 +161,25 @@
         <input type="submit" value="Create Task" class="submit-form" />
       </form>
     </section>
-    <section class="popup" id="opened-task"></section>
+    <section class="popup" id="opened-task">
+      <p id="opened-task-status"></p>
+      <h3 id="opened-task-title"></h3>
+      <p id="opened-task-description"></p>
+      <p id="opened-task-due"></p>
+      <div id="opened-task-priority">
+        <img src="assets/images/flag.svg" alt="flag" />
+        <p></p>
+      </div>
+      <div id="opened-task-footer">
+        <button id="opened-task-main"></button>
+        <button id="opened-task-edit">
+          <img src="assets/images/edit.svg" alt="edit" />
+        </button>
+        <button id="opened-task-close">
+          <img src="assets/images/close.svg" alt="close" />
+        </button>
+      </div>
+    </section>
     <section class="overlay"></section>
   </body>
 </html>

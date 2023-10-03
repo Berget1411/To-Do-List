@@ -9,12 +9,59 @@ const toDoList = new ToDoList();
 const project1 = new Project("project1");
 const task1 = new Task("task1", "description1", "2023-10-05", "low");
 task1.completeTask();
-const task2 = new Task("task2", "description2", "2023-10-06", "high");
+const task2 = new Task(
+  "task2",
+  "asda sad asdasdasd asas dasdasd asd asa sdadasdasdsaa asdadadas",
+  "2023-10-06",
+  "high"
+);
 project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
 
 //
+
+const toggleTask = () => {
+  document.querySelector("#opened-task").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+};
+
+const openTask = (taskName) => {
+  const currentProject = document.querySelector(".header-left h2").textContent;
+  const task = toDoList.getProject(currentProject).getTask(taskName);
+  const openedTaskContainer = document.querySelector("#opened-task");
+
+  const status = document.querySelector("#opened-task-status");
+  const mainButton = document.querySelector("#opened-task-main");
+  console.log(status);
+  if (task.isCompleted == false) {
+    status.textContent = "TODO";
+    mainButton.textContent = "Complete Task";
+  } else {
+    status.textContent = "DONE";
+    mainButton.textContent = "Delete Task";
+  }
+
+  document.querySelector("#opened-task-title").textContent = task.getTitle();
+  document.querySelector("#opened-task-description").textContent =
+    task.getDescription();
+  document.querySelector(
+    "#opened-task-due"
+  ).textContent = `Due ${task.getDate()}`;
+  document.querySelector("#opened-task-priority p").textContent = `${
+    task.getPriority()[0].toUpperCase() + task.getPriority().slice(1)
+  } Priority`;
+
+  const priorityIcon = document.querySelector("#opened-task-priority img");
+  priorityIcon.classList = "";
+  priorityIcon.classList.add(task.getPriority());
+
+  document
+    .querySelector("#opened-task-close")
+    .addEventListener("click", toggleTask);
+
+  toggleTask();
+};
 
 const renderTasks = () => {
   const todoTasks = document.querySelector("#todo ul");
@@ -29,6 +76,11 @@ const renderTasks = () => {
   tasks.forEach((task) => {
     const taskContainer = document.createElement("li");
     taskContainer.classList.add("task-container");
+
+    taskContainer.addEventListener("click", () => {
+      const taskName = task.getTitle();
+      openTask(taskName);
+    });
 
     const taskTitle = document.createElement("h4");
     taskTitle.textContent = task.getTitle();
