@@ -55,9 +55,13 @@ const openTask = (taskName) => {
   priorityIcon.classList = "";
   priorityIcon.classList.add(task.getPriority());
 
-  document.querySelector("#opened-task-close").addEventListener("click", () => {
-    togglePopup("#opened-task");
-  });
+  document.querySelector("#opened-task-close").addEventListener(
+    "click",
+    () => {
+      togglePopup("#opened-task");
+    },
+    { once: true }
+  );
 
   togglePopup("#opened-task");
 };
