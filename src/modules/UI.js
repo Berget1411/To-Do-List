@@ -1,4 +1,5 @@
 import projectIconSrc from "../assets/images/feather.svg";
+import taskPriorityFlagSrc from "../assets/images/flag.svg";
 
 import Task from "./task";
 import Project from "./project";
@@ -7,6 +8,7 @@ import ToDoList from "./todolist";
 const toDoList = new ToDoList();
 const project1 = new Project("project1");
 const task1 = new Task("task1", "description1", "2023-10-05", "low");
+task1.completeTask();
 const task2 = new Task("task2", "description2", "2023-10-06", "high");
 project1.addTask(task1);
 project1.addTask(task2);
@@ -17,6 +19,8 @@ toDoList.addProject(project1);
 const renderTasks = () => {
   const todoTasks = document.querySelector("#todo ul");
   const doneTasks = document.querySelector("#done ul");
+  doneTasks.textContent = ""; //clear tasks
+  todoTasks.textContent = ""; //clear tasks
   const currentProject = document.querySelector(".header-left h2").textContent;
   document.querySelector("#task-display").classList.remove("not-active");
 
@@ -33,10 +37,16 @@ const renderTasks = () => {
     taskFooter.classList.add("task-footer");
     const taskPriority = document.createElement("div");
     taskPriority.classList.add("task-priority");
-    taskPriority.textContent = task.getPriority();
+    const taskPriorityFlag = document.createElement("img");
+    taskPriorityFlag.classList.add(task.getPriority());
+    taskPriorityFlag.src = taskPriorityFlagSrc;
+    const taskPriorityText = document.createElement("p");
+    taskPriorityText.textContent = task.getPriority();
+    taskPriority.append(taskPriorityFlag, taskPriorityText);
+
     const taskDueDate = document.createElement("div");
     taskDueDate.classList.add("task-due-date");
-    taskDueDate.textContent = task.getDate();
+    taskDueDate.textContent = `due ${task.getDateWithoutYear()}`;
     taskFooter.append(taskPriority, taskDueDate);
 
     taskContainer.append(taskTitle, taskFooter);
@@ -144,7 +154,7 @@ const openProject = (e) => {
   editProjectButton.classList.remove("not-active");
   editProjectButton.addEventListener("click", editProjectToggle);
 
-  const headerTitle = document.querySelector("header h2");
+  const headerTitle = document.querySelector(".header-left h2");
   headerTitle.textContent = currentProject;
 
   renderTasks();
