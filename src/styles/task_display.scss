@@ -1,16 +1,82 @@
 main {
   grid-area: main;
+  padding: 40px 80px;
 }
 
 #task-display {
-  padding: 40px 220px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 
   h3 {
-    font-size: 0.9em;
+    margin-bottom: 20px;
     font-weight: bold;
     color: var(--gray-color);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    li {
+      background-color: var(--secondary-color);
+      padding: 15px 20px;
+      width: 280px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.36) 0px 6px 16px;
+      }
+
+      .task-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8em;
+
+        .task-priority {
+          display: flex;
+          gap: 4px;
+
+          background-color: var(--primary-button-color);
+          padding: 4px 8px;
+          border-radius: 20px;
+
+          img {
+            width: 14px;
+          }
+        }
+        .task-due-date {
+          color: var(--gray-color);
+        }
+
+        .low {
+          filter: var(--white-color-svg);
+        }
+        .med {
+          filter: brightness(0) saturate(100%) invert(55%) sepia(96%)
+            saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%); //orange
+        }
+        .high {
+          filter: brightness(0) saturate(100%) invert(32%) sepia(83%)
+            saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%); //red
+        }
+      }
+    }
   }
 }
 
