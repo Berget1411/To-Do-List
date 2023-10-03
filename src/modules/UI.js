@@ -25,9 +25,23 @@ const togglePopup = (elementId) => {
 };
 //
 
+const completeTask = (task) => {
+  task.completeTask();
+  renderTasks();
+  togglePopup("#opened-task");
+};
+
+const deleteTask = (projectName, task) => {
+  toDoList.getProject(projectName).removeTask(task.getTitle());
+
+  renderTasks();
+  togglePopup("#opened-task");
+};
+
 const openTask = (taskName) => {
-  const currentProject = document.querySelector(".header-left h2").textContent;
-  const task = toDoList.getProject(currentProject).getTask(taskName);
+  const currentProjectName =
+    document.querySelector(".header-left h2").textContent;
+  const task = toDoList.getProject(currentProjectName).getTask(taskName);
   const openedTaskContainer = document.querySelector("#opened-task");
 
   const status = document.querySelector("#opened-task-status");
@@ -36,9 +50,24 @@ const openTask = (taskName) => {
   if (task.isCompleted == false) {
     status.textContent = "TODO";
     mainButton.textContent = "Complete Task";
+
+    mainButton.addEventListener(
+      "click",
+      () => {
+        completeTask(task);
+      },
+      { once: true }
+    );
   } else {
     status.textContent = "DONE";
     mainButton.textContent = "Delete Task";
+    mainButton.addEventListener(
+      "click",
+      () => {
+        deleteTask(currentProjectName, task);
+      },
+      { once: true }
+    );
   }
 
   document.querySelector("#opened-task-title").textContent = task.getTitle();
