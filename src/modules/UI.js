@@ -6,15 +6,26 @@ import Project from "./project";
 import ToDoList from "./todolist";
 
 const toDoList = new ToDoList();
-const project1 = new Project("project1");
-const task1 = new Task("task1", "description1", "2023-10-05", "low");
-task1.completeTask();
+const project1 = new Project("TaskStack-Project");
+const task1 = new Task(
+  "Light & Dark mode",
+  "User should be able to toggle a switch to make website either dark or light mode",
+  "2023-10-01",
+  "low"
+);
 const task2 = new Task(
-  "task2",
-  "asda sad asdasdasd asas dasdasd asd asa sdadasdasdsaa asdadadas",
+  "Restructure Code into Modules",
+  "This task involves organizing and restructuring the project's codebase into modular components. Breaking down the code into manageable modules will improve code maintainability, readability, and scalability.",
   "2023-10-06",
   "high"
 );
+// const task3 = new Task(
+//   "Local Storage Implementation",
+//   "Implement local storage functionality to allow users to save their boards and tasks locally on their devices. This feature ensures that users can pick up where they left off even after closing and reopening the application.",
+//   "2023-10-08",
+//   "med"
+// );
+task2.completeTask();
 project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
@@ -25,18 +36,36 @@ const togglePopup = (elementId) => {
 };
 //
 
-const completeTask = (task) => {
-  task.completeTask();
+const completeTask = () => {
+  const currentProjectName =
+    document.querySelector(".header-left h2").textContent;
+  const currentTaskTitle =
+    document.querySelector("#opened-task-title").textContent;
+
+  toDoList
+    .getProject(currentProjectName)
+    .getTask(currentTaskTitle)
+    .completeTask();
+
   renderTasks();
   togglePopup("#opened-task");
 };
 
-const deleteTask = (projectName, task) => {
-  toDoList.getProject(projectName).removeTask(task.getTitle());
+const deleteTask = () => {
+  const currentProjectName =
+    document.querySelector(".header-left h2").textContent;
+  const currentTaskTitle =
+    document.querySelector("#opened-task-title").textContent;
+
+  toDoList.getProject(currentProjectName).removeTask(currentTaskTitle);
 
   renderTasks();
   togglePopup("#opened-task");
 };
+
+document.querySelector("#opened-task-close").addEventListener("click", () => {
+  togglePopup("#opened-task");
+});
 
 const openTask = (taskName) => {
   const currentProjectName =
@@ -46,28 +75,16 @@ const openTask = (taskName) => {
 
   const status = document.querySelector("#opened-task-status");
   const mainButton = document.querySelector("#opened-task-main");
-  console.log(status);
-  if (task.isCompleted == false) {
+  mainButton.removeEventListener("click", completeTask);
+  mainButton.removeEventListener("click", deleteTask);
+  if (task.isCompleted === false) {
     status.textContent = "TODO";
     mainButton.textContent = "Complete Task";
-
-    mainButton.addEventListener(
-      "click",
-      () => {
-        completeTask(task);
-      },
-      { once: true }
-    );
+    mainButton.addEventListener("click", completeTask, { once: true });
   } else {
     status.textContent = "DONE";
     mainButton.textContent = "Delete Task";
-    mainButton.addEventListener(
-      "click",
-      () => {
-        deleteTask(currentProjectName, task);
-      },
-      { once: true }
-    );
+    mainButton.addEventListener("click", deleteTask, { once: true });
   }
 
   document.querySelector("#opened-task-title").textContent = task.getTitle();
@@ -83,14 +100,6 @@ const openTask = (taskName) => {
   const priorityIcon = document.querySelector("#opened-task-priority img");
   priorityIcon.classList = "";
   priorityIcon.classList.add(task.getPriority());
-
-  document.querySelector("#opened-task-close").addEventListener(
-    "click",
-    () => {
-      togglePopup("#opened-task");
-    },
-    { once: true }
-  );
 
   togglePopup("#opened-task");
 };
