@@ -109,3 +109,88 @@ input[type="submit"]:hover {
   display: block;
   pointer-events: all;
 }
+
+#opened-task {
+  width: 380px !important;
+  padding: 40px 30px;
+  img {
+    width: 20px;
+  }
+  #opened-task-status {
+    color: var(--gray-color);
+    font-size: 0.8em;
+  }
+  #opened-task-title {
+    font-size: 1.4em;
+  }
+  #opened-task-description {
+    color: var(--gray-color);
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  #opened-task-due {
+    width: 120px;
+    background-color: var(--primary-button-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  #opened-task-priority {
+    width: 120px;
+    display: flex;
+    gap: 4px;
+    font-size: 0.9em;
+    background-color: var(--primary-button-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    img {
+      width: 14px;
+    }
+
+    .low {
+      filter: var(--white-color-svg);
+    }
+    .med {
+      filter: brightness(0) saturate(100%) invert(55%) sepia(96%)
+        saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%); //orange
+    }
+    .high {
+      filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%)
+        hue-rotate(320deg) brightness(107%) contrast(109%); //red
+    }
+  }
+  #opened-task-footer {
+    display: flex;
+    gap: 10px;
+    & > * {
+      border: none;
+      background-color: var(--secondary-button-color);
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--secondary-button-hover-color);
+      }
+    }
+
+    #opened-task-main {
+      border-radius: 24px;
+      padding: 0px 40px;
+      font-size: 1.2em;
+    }
+    #opened-task-edit,
+    #opened-task-close {
+      padding: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+
+      img {
+        filter: var(--white-color-svg);
+        width: 24px;
+      }
+    }
+  }
+}
