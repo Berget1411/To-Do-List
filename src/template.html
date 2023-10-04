@@ -19,15 +19,15 @@
           <div class="due">
             <h2>DUE</h2>
             <ul>
-              <li>
+              <li id="today-tasks">
                 <img src="assets/images/day.svg" alt="today" />
                 <p>Today</p>
               </li>
-              <li>
+              <li id="week-tasks">
                 <img src="assets/images/week.svg" alt="week" />
                 <p>This Week</p>
               </li>
-              <li>
+              <li id="all-tasks">
                 <img src="assets/images/all.svg" alt="all-time" />
                 <p>All Time</p>
               </li>
@@ -81,16 +81,7 @@
         </div>
       </header>
       <main>
-        <div id="task-display" class="not-active">
-          <div id="todo">
-            <div><h3>TODO</h3></div>
-            <ul></ul>
-          </div>
-          <div id="done">
-            <div><h3>DONE</h3></div>
-            <ul></ul>
-          </div>
-        </div>
+        <div id="task-display" class="not-active"></div>
       </main>
     </section>
 
