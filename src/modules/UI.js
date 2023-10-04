@@ -35,13 +35,12 @@ const togglePopup = (elementId) => {
   document.querySelector(".overlay").classList.toggle("active");
 };
 
-const deleteTask2 = (task) => {
+const deleteEditedTask = (task) => {
   const currentProjectName =
     document.querySelector(".header-left h2").textContent;
 
   toDoList.getProject(currentProjectName).removeTask(task.getTitle());
   renderTasks();
-  togglePopup("#edit-task");
 };
 //
 
@@ -71,19 +70,22 @@ const editTask = (task) => {
     { once: true }
   );
 
-  document
-    .querySelector("#close-edit-task-popup")
-    .addEventListener("click", function closeEdit() {
+  document.querySelector("#close-edit-task-popup").addEventListener(
+    "click",
+    () => {
       togglePopup("#edit-task");
-      this.removeEventListener("click", closeEdit);
-    });
+    },
+    { once: true }
+  );
 
-  document
-    .querySelector("#delete-task-edit-popup")
-    .addEventListener("click", function handler() {
-      deleteTask2(task);
-      this.removeEventListener("click", handler);
-    });
+  document.querySelector("#delete-task-edit-popup").addEventListener(
+    "click",
+    () => {
+      deleteEditedTask(task);
+      togglePopup("#edit-task");
+    },
+    { once: true }
+  );
 };
 
 const completeTask = () => {
