@@ -30,12 +30,103 @@ project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
 
-console.log(project1.getTasksThisWeek());
+//date tasks
+
+const renderSpecificTasks = (date) => {
+  const projectDisplay = document.querySelector("#task-display");
+  projectDisplay.textContent = "";
+  projectDisplay.classList.remove("not-active");
+
+  const projects = toDoList.getProjects();
+
+  projects.forEach((project) => {
+    const createCard = (taskList) => {
+      const container = document.createElement("div");
+      container.classList.add("date-container");
+      const header = document.createElement("div");
+      header.classList.add("date-header");
+      const containerTitle = document.createElement("h3");
+      containerTitle.textContent = project.getName();
+      const line = document.createElement("div");
+      line.classList.add("hr");
+      const seeProject = document.createElement("button");
+      seeProject.textContent = "SEE PROJECT";
+      header.append(containerTitle, line, seeProject);
+      const tasks = document.createElement("ul");
+
+      taskList.forEach((task) => {
+        const taskContainer = document.createElement("li");
+
+        const taskTitle = document.createElement("h4");
+        taskTitle.textContent = task.getTitle();
+
+        const taskFooter = document.createElement("div");
+        taskFooter.classList.add("task-footer");
+        const taskPriority = document.createElement("div");
+        taskPriority.classList.add("task-priority");
+        const taskPriorityFlag = document.createElement("img");
+        taskPriorityFlag.classList.add(task.getPriority());
+        taskPriorityFlag.src = taskPriorityFlagSrc;
+        const taskPriorityText = document.createElement("p");
+        taskPriorityText.textContent = task.getPriority();
+        taskPriority.append(taskPriorityFlag, taskPriorityText);
+
+        const taskDueDate = document.createElement("div");
+        taskDueDate.classList.add("task-due-date");
+        taskDueDate.textContent = `due ${task.getDateWithoutYear()}`;
+        taskFooter.append(taskPriority, taskDueDate);
+
+        taskContainer.append(taskTitle, taskFooter);
+
+        tasks.append(taskContainer);
+      });
+      container.append(header, tasks);
+
+      projectDisplay.append(container);
+    };
+
+    if (date == "today") {
+      console.log(project.getTasksToday());
+      if (project.getTasksToday().length > 0) {
+        createCard(project.getTasksToday());
+      }
+    } else if (date == "week") {
+      console.log(project.getTasksThisWeek());
+      if (project.getTasksThisWeek().length > 0) {
+        createCard(project.getTasksThisWeek());
+      }
+    } else {
+      console.log(project.getTasks());
+      if (project.getTasks().length > 0) {
+        createCard(project.getTasks());
+      }
+    }
+  });
+};
+
+document.querySelector("#today-tasks").addEventListener("click", (e) => {
+  document.querySelector(".header-left h2").textContent = "Today";
+  renderSpecificTasks("today");
+});
+
+document.querySelector("#week-tasks").addEventListener("click", (e) => {
+  document.querySelector(".header-left h2").textContent = "This Week";
+  renderSpecificTasks("week");
+});
+
+document.querySelector("#all-tasks").addEventListener("click", (e) => {
+  document.querySelector(".header-left h2").textContent = "All Time";
+  renderSpecificTasks("all");
+});
+
+//
 
 const togglePopup = (elementId) => {
   document.querySelector(elementId).classList.toggle("active");
   document.querySelector(".overlay").classList.toggle("active");
 };
+
+//
 
 const deleteEditedTask = (task) => {
   const currentProjectName =
@@ -44,7 +135,6 @@ const deleteEditedTask = (task) => {
   toDoList.getProject(currentProjectName).removeTask(task.getTitle());
   renderTasks();
 };
-//
 
 const editTask = (task) => {
   const title = document.querySelector("#input-edit-task-title");
@@ -170,12 +260,28 @@ const openTask = (taskName) => {
 };
 
 const renderTasks = () => {
-  const todoTasks = document.querySelector("#todo ul");
-  const doneTasks = document.querySelector("#done ul");
-  doneTasks.textContent = ""; //clear tasks
-  todoTasks.textContent = ""; //clear tasks
   const currentProject = document.querySelector(".header-left h2").textContent;
-  document.querySelector("#task-display").classList.remove("not-active");
+  const taskDisplay = document.querySelector("#task-display");
+  taskDisplay.textContent = "";
+
+  const todoTaskContainer = document.createElement("div");
+  todoTaskContainer.setAttribute("id", "todo");
+  const todoTitleContainer = document.createElement("div");
+  const todoTitle = document.createElement("h3");
+  todoTitleContainer.append(todoTitle);
+  const todoTasks = document.createElement("ul");
+  todoTaskContainer.append(todoTitleContainer, todoTasks);
+
+  const doneTaskContainer = document.createElement("div");
+  doneTaskContainer.setAttribute("id", "done");
+  const doneTitleContainer = document.createElement("div");
+  const doneTitle = document.createElement("h3");
+  doneTitleContainer.append(doneTitle);
+  const doneTasks = document.createElement("ul");
+  doneTaskContainer.append(doneTitleContainer, doneTasks);
+
+  taskDisplay.append(todoTasks, doneTasks);
+  taskDisplay.classList.remove("not-active");
 
   const tasks = toDoList.getProject(currentProject).getTasks();
 
