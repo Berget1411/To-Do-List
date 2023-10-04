@@ -268,6 +268,7 @@ const renderTasks = () => {
   todoTaskContainer.setAttribute("id", "todo");
   const todoTitleContainer = document.createElement("div");
   const todoTitle = document.createElement("h3");
+  todoTitle.textContent = "TODO";
   todoTitleContainer.append(todoTitle);
   const todoTasks = document.createElement("ul");
   todoTaskContainer.append(todoTitleContainer, todoTasks);
@@ -276,11 +277,12 @@ const renderTasks = () => {
   doneTaskContainer.setAttribute("id", "done");
   const doneTitleContainer = document.createElement("div");
   const doneTitle = document.createElement("h3");
+  doneTitle.textContent = "DONE";
   doneTitleContainer.append(doneTitle);
   const doneTasks = document.createElement("ul");
   doneTaskContainer.append(doneTitleContainer, doneTasks);
 
-  taskDisplay.append(todoTasks, doneTasks);
+  taskDisplay.append(todoTaskContainer, doneTaskContainer);
   taskDisplay.classList.remove("not-active");
 
   const tasks = toDoList.getProject(currentProject).getTasks();
