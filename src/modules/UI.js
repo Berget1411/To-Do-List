@@ -10,7 +10,7 @@ const project1 = new Project("TaskStack-Project");
 const task1 = new Task(
   "Light & Dark mode",
   "User should be able to toggle a switch to make website either dark or light mode",
-  "2023-10-01",
+  "2023-10-04",
   "low"
 );
 const task2 = new Task(
@@ -29,6 +29,8 @@ task2.completeTask();
 project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
+
+console.log(project1.getTasksThisWeek());
 
 const togglePopup = (elementId) => {
   document.querySelector(elementId).classList.toggle("active");

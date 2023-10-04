@@ -46,7 +46,7 @@ export default class Project {
   getTasksThisWeek() {
     return this.tasks.filter((task) => {
       const taskDate = new Date(task.getDateFormatted());
-      return isThisWeek(subDays(taskDate), 1);
+      return isThisWeek(subDays(toDate(taskDate), 1));
     });
   }
 }
