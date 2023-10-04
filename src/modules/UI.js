@@ -306,6 +306,7 @@ const openProject = (e) => {
   editProjectButton.classList.remove("not-active");
   editProjectButton.addEventListener("click", () => {
     togglePopup("#edit-project-popup");
+    document.querySelector("#edit-project-input").value = currentProject;
   });
 
   const headerTitle = document.querySelector(".header-left h2");
