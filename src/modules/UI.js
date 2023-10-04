@@ -34,7 +34,57 @@ const togglePopup = (elementId) => {
   document.querySelector(elementId).classList.toggle("active");
   document.querySelector(".overlay").classList.toggle("active");
 };
+
+const deleteTask2 = (task) => {
+  const currentProjectName =
+    document.querySelector(".header-left h2").textContent;
+
+  toDoList.getProject(currentProjectName).removeTask(task.getTitle());
+  renderTasks();
+  togglePopup("#edit-task");
+};
 //
+
+const editTask = (task) => {
+  const title = document.querySelector("#input-edit-task-title");
+  title.value = task.getTitle();
+  const description = document.querySelector("#input-edit-task-descrip");
+  description.value = task.getDescription();
+  const dueDate = document.querySelector("#input-edit-task-due-date");
+  dueDate.value = task.getDate();
+  const priority = document.querySelector("#input-edit-task-priority");
+  priority.value = task.getPriority();
+
+  document.querySelector("#edit-task form").addEventListener(
+    "submit",
+    (e) => {
+      e.preventDefault();
+
+      task.setTitle(title.value);
+      task.setDescription(description.value);
+      task.setDate(dueDate.value);
+      task.setPriority(priority.value);
+
+      togglePopup("#edit-task");
+      renderTasks();
+    },
+    { once: true }
+  );
+
+  document
+    .querySelector("#close-edit-task-popup")
+    .addEventListener("click", function closeEdit() {
+      togglePopup("#edit-task");
+      this.removeEventListener("click", closeEdit);
+    });
+
+  document
+    .querySelector("#delete-task-edit-popup")
+    .addEventListener("click", function handler() {
+      deleteTask2(task);
+      this.removeEventListener("click", handler);
+    });
+};
 
 const completeTask = () => {
   const currentProjectName =
@@ -100,6 +150,17 @@ const openTask = (taskName) => {
   const priorityIcon = document.querySelector("#opened-task-priority img");
   priorityIcon.classList = "";
   priorityIcon.classList.add(task.getPriority());
+
+  document.querySelector("#opened-task-edit").addEventListener(
+    "click",
+    () => {
+      togglePopup("#opened-task");
+      togglePopup("#edit-task");
+
+      editTask(task);
+    },
+    { once: true }
+  );
 
   togglePopup("#opened-task");
 };
