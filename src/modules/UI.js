@@ -33,6 +33,8 @@ toDoList.addProject(project1);
 //date tasks
 
 const renderSpecificTasks = (date) => {
+  document.querySelector(".add-task-button").classList.add("not-active");
+  document.querySelector(".edit-project-button").classList.add("not-active");
   const projectDisplay = document.querySelector("#task-display");
   projectDisplay.textContent = "";
   projectDisplay.classList.remove("not-active");
