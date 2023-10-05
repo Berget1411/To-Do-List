@@ -10,7 +10,7 @@ const project1 = new Project("TaskStack-Project");
 const task1 = new Task(
   "Light & Dark mode",
   "User should be able to toggle a switch to make website either dark or light mode",
-  "2023-10-04",
+  "2023-10-05",
   "low"
 );
 const task2 = new Task(
@@ -53,8 +53,13 @@ const renderSpecificTasks = (date) => {
       line.classList.add("hr");
       const seeProject = document.createElement("button");
       seeProject.textContent = "SEE PROJECT";
+      seeProject.classList.add(project.getName());
+
+      seeProject.addEventListener("click", openProject);
+
       header.append(containerTitle, line, seeProject);
       const tasks = document.createElement("ul");
+      tasks.classList.add("date-tasks");
 
       taskList.forEach((task) => {
         const taskContainer = document.createElement("li");
@@ -79,6 +84,29 @@ const renderSpecificTasks = (date) => {
         taskFooter.append(taskPriority, taskDueDate);
 
         taskContainer.append(taskTitle, taskFooter);
+
+        taskContainer.addEventListener("click", () => {
+          openTask(task.getTitle(), project.getName());
+          document
+            .querySelector("#opened-task-edit")
+            .classList.add("not-active");
+          const mainButton = document.querySelector("#opened-task-main");
+          mainButton.classList.add(project.getName());
+          mainButton.textContent = "Open Project";
+          mainButton.removeEventListener("click", completeTask);
+          mainButton.removeEventListener("click", deleteTask);
+          mainButton.addEventListener(
+            "click",
+            (e) => {
+              openProject(e);
+              togglePopup("#opened-task");
+              document
+                .querySelector("#opened-task-edit")
+                .classList.remove("not-active");
+            },
+            { once: true }
+          );
+        });
 
         tasks.append(taskContainer);
       });
@@ -213,10 +241,18 @@ document.querySelector("#opened-task-close").addEventListener("click", () => {
   togglePopup("#opened-task");
 });
 
-const openTask = (taskName) => {
+const openTask = (taskName, projectName) => {
   const currentProjectName =
     document.querySelector(".header-left h2").textContent;
-  const task = toDoList.getProject(currentProjectName).getTask(taskName);
+  const projectNameExist = () => {
+    if (projectName == undefined) {
+      return toDoList.getProject(currentProjectName).getTask(taskName);
+    } else {
+      return toDoList.getProject(projectName).getTask(taskName);
+    }
+  };
+  const task = projectNameExist();
+
   const openedTaskContainer = document.querySelector("#opened-task");
 
   const status = document.querySelector("#opened-task-status");
@@ -266,6 +302,8 @@ const renderTasks = () => {
   const taskDisplay = document.querySelector("#task-display");
   taskDisplay.textContent = "";
 
+  const container = document.createElement("container");
+  container.classList.add("project-render-task");
   const todoTaskContainer = document.createElement("div");
   todoTaskContainer.setAttribute("id", "todo");
   const todoTitleContainer = document.createElement("div");
@@ -284,7 +322,8 @@ const renderTasks = () => {
   const doneTasks = document.createElement("ul");
   doneTaskContainer.append(doneTitleContainer, doneTasks);
 
-  taskDisplay.append(todoTaskContainer, doneTaskContainer);
+  container.append(todoTaskContainer, doneTaskContainer);
+  taskDisplay.append(container);
   taskDisplay.classList.remove("not-active");
 
   const tasks = toDoList.getProject(currentProject).getTasks();
