@@ -4,9 +4,11 @@ main {
 }
 
 #task-display {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  .project-render-task {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
 
   h3 {
     margin-bottom: 20px;

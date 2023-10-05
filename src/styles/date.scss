@@ -1,0 +1,51 @@
+@use "index";
+
+.date-container {
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+.date-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 1.3em;
+    white-space: nowrap;
+    height: 5px;
+  }
+
+  button {
+    padding: 7px 17px;
+    border-radius: 17px;
+    border: none;
+    background-color: var(--secondary-button-color);
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--secondary-button-hover-color);
+    }
+  }
+}
+
+.hr {
+  height: 1px;
+  background-color: var(--gray-color);
+  flex: auto;
+}
+
+.date-tasks {
+  padding: 0px 30px;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 20px;
+
+  li {
+    width: 100% !important;
+  }
+}
