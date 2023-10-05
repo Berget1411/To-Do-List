@@ -30,6 +30,14 @@ project1.addTask(task1);
 project1.addTask(task2);
 toDoList.addProject(project1);
 
+//light and dark mode
+
+document
+  .querySelector(".light-dark-mode input")
+  .addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+  });
+
 //date tasks
 
 const renderSpecificTasks = (date) => {

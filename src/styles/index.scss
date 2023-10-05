@@ -56,8 +56,10 @@ video {
 
   &.light {
     --primary-color: #38bdf8;
-    --secondary-color: #cbd5e1;
-    --third-color: #e2e8f0;
+    --secondary-color: #7497c9;
+    --third-color: #5372a3;
+    --gray-color: #abbfda;
+    --primary-button-color: #6c84a4;
   }
 
   --primary-color-svg: brightness(0) saturate(100%) invert(60%) sepia(16%)
