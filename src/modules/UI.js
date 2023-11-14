@@ -124,17 +124,14 @@ const renderSpecificTasks = (date) => {
     };
 
     if (date == "today") {
-      console.log(project.getTasksToday());
       if (project.getTasksToday().length > 0) {
         createCard(project.getTasksToday());
       }
     } else if (date == "week") {
-      console.log(project.getTasksThisWeek());
       if (project.getTasksThisWeek().length > 0) {
         createCard(project.getTasksThisWeek());
       }
     } else {
-      console.log(project.getTasks());
       if (project.getTasks().length > 0) {
         createCard(project.getTasks());
       }
@@ -405,7 +402,6 @@ const createTask = (e) => {
 
   const newTask = task(taskTitle, taskDescription, taskDueDate, taskPriority);
   toDoList.getProject(currentProject).addTask(newTask);
-  console.log(toDoList.projects[0].getTasks());
 
   renderTasks();
   clearAddTaskForm();
