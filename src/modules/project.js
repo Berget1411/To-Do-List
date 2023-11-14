@@ -15,7 +15,7 @@ export default function project(name) {
   const addTask = (newTask) => tasks.push(newTask);
   const removeTask = (taskTitle) => {
     const taskToRemove = tasks.find((task) => task.getTitle() === taskTitle);
-    tasks.splice(tasks.indexOf(taskToRemove));
+    tasks.splice(tasks.indexOf(taskToRemove), 1);
   };
 
   const getTasksToday = () => {
