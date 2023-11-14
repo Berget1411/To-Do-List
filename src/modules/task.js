@@ -1,58 +1,46 @@
-export default class Task {
-  constructor(taskTitle, description, dueDate, priority) {
-    this.taskTitle = taskTitle;
-    this.description = description;
-    this.dueDate = dueDate;
-    this.priority = priority;
-    this.isCompleted = false;
-  }
+export default function task(taskTitle, description, dueDate, priority) {
+  let isCompleted = false;
 
-  setTitle(taskTitle) {
-    this.taskTitle = taskTitle;
-  }
+  const setTitle = (tit) => (taskTitle = tit);
+  const getTitle = () => taskTitle;
 
-  getTitle() {
-    return this.taskTitle;
-  }
+  const setDescription = (des) => (description = des);
+  const getDescription = () => description;
 
-  setDescription(description) {
-    this.description = description;
-  }
+  const setDate = (due) => (dueDate = due);
+  const getDate = () => dueDate;
 
-  getDescription() {
-    return this.description;
-  }
-
-  setDate(dueDate) {
-    this.dueDate = dueDate;
-  }
-
-  getDate() {
-    return this.dueDate;
-  }
-
-  getDateFormatted() {
-    const day = this.dueDate.split("-")[2];
-    const month = this.dueDate.split("-")[1];
-    const year = this.dueDate.split("-")[0];
+  const getDateFormatted = () => {
+    const day = dueDate.split("-")[2];
+    const month = dueDate.split("-")[1];
+    const year = dueDate.split("-")[0];
     return `${month}/${day}/${year}`;
-  }
+  };
 
-  getDateWithoutYear() {
-    const day = this.dueDate.split("-")[2];
-    const month = this.dueDate.split("-")[1];
+  const getDateWithoutYear = () => {
+    const day = dueDate.split("-")[2];
+    const month = dueDate.split("-")[1];
     return `${month}/${day}`;
-  }
+  };
 
-  setPriority(priority) {
-    this.priority = priority;
-  }
+  const setPriority = (prio) => (priority = prio);
+  const getPriority = () => priority;
 
-  getPriority() {
-    return this.priority;
-  }
+  const completeTask = () => (isCompleted = true);
+  const getIsCompleted = () => isCompleted;
 
-  completeTask() {
-    this.isCompleted = true;
-  }
+  return {
+    setTitle,
+    getTitle,
+    setDescription,
+    getDescription,
+    setDate,
+    getDate,
+    getDateFormatted,
+    getDateWithoutYear,
+    setPriority,
+    getPriority,
+    completeTask,
+    getIsCompleted,
+  };
 }

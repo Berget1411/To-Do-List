@@ -1,19 +1,19 @@
 import projectIconSrc from "../assets/images/feather.svg";
 import taskPriorityFlagSrc from "../assets/images/flag.svg";
 
-import Task from "./task";
+import task from "./task";
 import Project from "./project";
 import ToDoList from "./todolist";
 
 const toDoList = new ToDoList();
 const project1 = new Project("TaskStack-Project");
-const task1 = new Task(
+const task1 = task(
   "Light & Dark mode",
   "User should be able to toggle a switch to make website either dark or light mode",
   "2023-10-05",
   "low"
 );
-const task2 = new Task(
+const task2 = task(
   "Restructure Code into Modules",
   "This task involves organizing and restructuring the project's codebase into modular components. Breaking down the code into manageable modules will improve code maintainability, readability, and scalability.",
   "2023-10-06",
@@ -267,7 +267,7 @@ const openTask = (taskName, projectName) => {
   const mainButton = document.querySelector("#opened-task-main");
   mainButton.removeEventListener("click", completeTask);
   mainButton.removeEventListener("click", deleteTask);
-  if (task.isCompleted === false) {
+  if (task.getIsCompleted() === false) {
     status.textContent = "TODO";
     mainButton.textContent = "Complete Task";
     mainButton.addEventListener("click", completeTask, { once: true });
@@ -366,7 +366,7 @@ const renderTasks = () => {
 
     taskContainer.append(taskTitle, taskFooter);
 
-    if (task.isCompleted == false) {
+    if (task.getIsCompleted() == false) {
       todoTasks.append(taskContainer);
     } else {
       doneTasks.append(taskContainer);
