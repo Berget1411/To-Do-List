@@ -1,5 +1,7 @@
 @use "index";
-
+label {
+  color: var(--white-color) !important;
+}
 .popup {
   position: fixed;
   top: 50%;
