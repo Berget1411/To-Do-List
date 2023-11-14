@@ -1,4 +1,3 @@
-"use strict";
 (self["webpackChunktaskstack"] = self["webpackChunktaskstack"] || []).push([["bundle"],{
 
 /***/ "./src/index.js":
@@ -7,6 +6,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _template_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./template.html */ "./src/template.html");
@@ -23,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_feather_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/feather.svg */ "./src/assets/images/feather.svg");
 /* harmony import */ var _assets_images_flag_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/flag.svg */ "./src/assets/images/flag.svg");
@@ -457,6 +458,7 @@ collapseButton.addEventListener("click", toggleSidebar);
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Project)
@@ -465,12 +467,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/toDate/index.js");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/isThisWeek/index.js");
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/esm/subDays/index.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _typeof(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
+}
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+  }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+function _toPropertyKey(arg) {
+  var key = _toPrimitive(arg, "string");
+  return _typeof(key) === "symbol" ? key : String(key);
+}
+function _toPrimitive(input, hint) {
+  if (_typeof(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if (_typeof(res) !== "object") return res;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (hint === "string" ? String : Number)(input);
+}
 
 var Project = /*#__PURE__*/function () {
   function Project(name) {
@@ -547,16 +588,56 @@ var Project = /*#__PURE__*/function () {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Task)
 /* harmony export */ });
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _typeof(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
+}
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+  }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+function _toPropertyKey(arg) {
+  var key = _toPrimitive(arg, "string");
+  return _typeof(key) === "symbol" ? key : String(key);
+}
+function _toPrimitive(input, hint) {
+  if (_typeof(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if (_typeof(res) !== "object") return res;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (hint === "string" ? String : Number)(input);
+}
 var Task = /*#__PURE__*/function () {
   function Task(taskTitle, description, dueDate, priority) {
     _classCallCheck(this, Task);
@@ -639,16 +720,56 @@ var Task = /*#__PURE__*/function () {
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ToDoList)
 /* harmony export */ });
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _typeof(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
+}
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+  }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
+function _toPropertyKey(arg) {
+  var key = _toPrimitive(arg, "string");
+  return _typeof(key) === "symbol" ? key : String(key);
+}
+function _toPrimitive(input, hint) {
+  if (_typeof(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if (_typeof(res) !== "object") return res;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (hint === "string" ? String : Number)(input);
+}
 var ToDoList = /*#__PURE__*/function () {
   function ToDoList() {
     _classCallCheck(this, ToDoList);
@@ -695,813 +816,9 @@ var ToDoList = /*#__PURE__*/function () {
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
   \***********************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap);"]);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, `/* common reused styles */
-/* CSS Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-html {
-  color-scheme: dark light;
-}
-
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-/* Custom CSS */
-:root {
-  --primary-color: #38bdf8;
-  --secondary-color: #334155;
-  --third-color: #1e293b;
-  --white-color: #fafafa;
-  --gray-color: #94a3b8;
-  --primary-color-svg: brightness(0) saturate(100%) invert(60%) sepia(16%)
-    saturate(2562%) hue-rotate(169deg) brightness(107%) contrast(95%);
-  --white-color-svg: brightness(0) saturate(100%) invert(100%) sepia(0%)
-    saturate(0%) hue-rotate(14deg) brightness(105%) contrast(96%);
-  --primary-button-color: #475569;
-  --primary-button-hover-color: #53657d;
-  --secondary-button-color: #38bdf8;
-  --secondary-button-hover-color: #7dd3fc;
-}
-:root.light {
-  --primary-color: #38bdf8;
-  --secondary-color: #7497c9;
-  --third-color: #5372a3;
-  --gray-color: #abbfda;
-  --primary-button-color: #6c84a4;
-}
-
-.not-active {
-  display: none !important;
-}
-
-.content {
-  min-height: 100vh;
-  background-color: var(--third-color);
-  font-family: "Roboto", sans-serif;
-  display: grid;
-  grid-template: "sidebar header" 100px "sidebar main" 1fr/300px 1fr;
-}
-
-.hide-sidebar {
-  grid-template: "header header" 100px "main main" 1fr/300px 1fr !important;
-}
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Sidebar general */
-.sidebar {
-  grid-area: sidebar;
-  padding: 40px;
-  background-color: var(--secondary-color);
-  border-right: 1px solid var(--gray-color);
-}
-.sidebar h2 {
-  color: var(--gray-color);
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-/* Sidebar top */
-.sidebar-top {
-  margin-bottom: 100px;
-}
-.sidebar-top img {
-  filter: var(--primary-color-svg);
-  width: 22px;
-}
-.sidebar-top .banner {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.sidebar-top .banner h1 {
-  font-size: 2.1em;
-}
-.sidebar-top .banner img {
-  width: 34px;
-}
-.sidebar-top ul {
-  list-style: none;
-}
-.sidebar-top ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.sidebar-top ul li:hover {
-  transform: translate(5px);
-}
-.sidebar-top ul li p {
-  font-size: 1.1em;
-}
-.sidebar-top .create-project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 10px 20px;
-  margin-left: 10px;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-}
-.sidebar-top .create-project img {
-  width: 18px;
-  border: 2px solid var(--primary-color);
-  border-radius: 100%;
-}
-.sidebar-top .create-project p {
-  font-size: 0.8em;
-}
-.sidebar-top .create-project:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Sidebar bottom */
-.sidebar-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-}
-.sidebar-bottom img {
-  filter: var(--white-color-svg);
-}
-.sidebar-bottom .light-dark-mode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-.sidebar-bottom .light-dark-mode img {
-  width: 25px;
-}
-.sidebar-bottom .collapse {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 20px;
-  background-color: var(--primary-button-color);
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.sidebar-bottom .collapse img {
-  width: 20px;
-}
-.sidebar-bottom .collapse p {
-  font-size: 0.9em;
-}
-.sidebar-bottom .collapse:hover {
-  background-color: var(--primary-button-hover-color);
-}
-.sidebar-bottom footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sidebar-bottom footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  color: var(--white-color);
-}
-.sidebar-bottom footer img {
-  width: 20px;
-}
-
-/* light and dark mode switch */
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 42px;
-  height: 24.33px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--primary-color);
-  border-radius: 23.3px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16.66px;
-  width: 16.66px;
-  border-radius: 50%;
-  left: 20.66px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--gray-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--gray-color);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(-16.66px);
-  -ms-transform: translateX(-16.66px);
-  transform: translateX(-16.66px);
-}
-
-header {
-  grid-area: header;
-  background-color: var(--secondary-color);
-  border-bottom: 1px solid var(--gray-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 40px;
-}
-header h2 {
-  font-size: 1.8em;
-}
-header .hamburger-menu {
-  background-color: var(--primary-button-color);
-  border-radius: 100%;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-header .hamburger-menu:hover {
-  background-color: var(--primary-button-hover-color);
-}
-header img {
-  width: 25px;
-  filter: var(--white-color-svg);
-}
-
-.header-right {
-  display: flex;
-  gap: 20px;
-}
-.header-right .add-task-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-button-color);
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-.header-right .add-task-button:hover {
-  background-color: var(--secondary-button-hover-color);
-}
-.header-right .edit-project-button {
-  background-color: var(--primary-button-color);
-  border-radius: 100%;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.header-right .edit-project-button:hover {
-  background-color: var(--primary-button-hover-color);
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  z-index: 10;
-  width: 400px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: var(--secondary-color);
-}
-
-.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.popup-header {
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.popup-header h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.popup-header button {
-  background-color: var(--primary-button-color) !important;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  border-radius: 100%;
-  transition: background-color 0.3s;
-}
-.popup-header button img {
-  width: 15px;
-  filter: var(--white-color-svg);
-}
-.popup-header button:hover {
-  background-color: var(--primary-button-hover-color) !important;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0px 6px;
-}
-form label {
-  margin-bottom: 8px;
-  font-size: 0.9em;
-}
-form input,
-form textarea,
-form select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--gray-color);
-  margin-bottom: 20px;
-  font-size: 0.9em;
-}
-
-input:focus {
-  outline: none;
-  padding: 9px;
-  cursor: pointer;
-  border: 2px solid var(--primary-color);
-}
-
-input[type=submit] {
-  padding: 10px;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--secondary-button-color);
-  color: var(--white-color);
-  transition: background-color 0.3s;
-}
-
-input[type=submit]:hover {
-  background-color: var(--secondary-button-hover-color);
-}
-
-.overlay {
-  position: fixed;
-  display: none;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 10000px;
-  height: 10000px;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-  z-index: 9;
-}
-
-.overlay.active {
-  display: block;
-  pointer-events: all;
-}
-
-#opened-task {
-  width: 380px !important;
-  padding: 40px 30px;
-}
-#opened-task img {
-  width: 20px;
-}
-#opened-task #opened-task-status {
-  color: var(--gray-color);
-  font-size: 0.8em;
-}
-#opened-task #opened-task-title {
-  font-size: 1.4em;
-}
-#opened-task #opened-task-description {
-  color: var(--gray-color);
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-#opened-task #opened-task-due {
-  width: 120px;
-  background-color: var(--primary-button-color);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-}
-#opened-task #opened-task-priority {
-  width: 120px;
-  display: flex;
-  gap: 4px;
-  font-size: 0.9em;
-  background-color: var(--primary-button-color);
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin-bottom: 30px;
-}
-#opened-task #opened-task-priority img {
-  width: 14px;
-}
-#opened-task #opened-task-priority .low {
-  filter: var(--white-color-svg);
-}
-#opened-task #opened-task-priority .med {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%);
-}
-#opened-task #opened-task-priority .high {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%);
-}
-#opened-task #opened-task-footer {
-  display: flex;
-  gap: 10px;
-}
-#opened-task #opened-task-footer > * {
-  border: none;
-  background-color: var(--secondary-button-color);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-#opened-task #opened-task-footer > *:hover {
-  background-color: var(--secondary-button-hover-color);
-}
-#opened-task #opened-task-footer #opened-task-main {
-  border-radius: 24px;
-  padding: 0px 40px;
-  font-size: 1.2em;
-}
-#opened-task #opened-task-footer #opened-task-edit,
-#opened-task #opened-task-footer #opened-task-close {
-  padding: 8px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-#opened-task #opened-task-footer #opened-task-edit img,
-#opened-task #opened-task-footer #opened-task-close img {
-  filter: var(--white-color-svg);
-  width: 24px;
-}
-
-main {
-  grid-area: main;
-  padding: 40px 80px;
-}
-
-#task-display .project-render-task {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-#task-display h3 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: var(--gray-color);
-}
-#task-display ul {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  list-style: none;
-}
-#task-display ul h4 {
-  font-size: 1.2em;
-}
-#task-display ul li {
-  background-color: var(--secondary-color);
-  padding: 15px 20px;
-  width: 280px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-#task-display ul li:hover {
-  transform: translateY(-3px);
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 6px 16px;
-}
-#task-display ul li .task-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.8em;
-}
-#task-display ul li .task-footer .task-priority {
-  display: flex;
-  gap: 4px;
-  background-color: var(--primary-button-color);
-  padding: 4px 8px;
-  border-radius: 20px;
-}
-#task-display ul li .task-footer .task-priority img {
-  width: 14px;
-}
-#task-display ul li .task-footer .task-due-date {
-  color: var(--gray-color);
-}
-#task-display ul li .task-footer .low {
-  filter: var(--white-color-svg);
-}
-#task-display ul li .task-footer .med {
-  filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%);
-}
-#task-display ul li .task-footer .high {
-  filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%);
-}
-
-#todo h3::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: var(--primary-color);
-  display: inline-block;
-  margin-right: 5px;
-}
-
-#done h3::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: #6ee7b7;
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.date-container {
-  padding: 10px;
-  margin-bottom: 100px;
-}
-
-.date-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  margin-bottom: 40px;
-}
-.date-header h3 {
-  font-size: 1.3em;
-  white-space: nowrap;
-  height: 5px;
-}
-.date-header button {
-  padding: 7px 17px;
-  border-radius: 17px;
-  border: none;
-  background-color: var(--secondary-button-color);
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.date-header button:hover {
-  background-color: var(--secondary-button-hover-color);
-}
-
-.hr {
-  height: 1px;
-  background-color: var(--gray-color);
-  flex: auto;
-}
-
-.date-tasks {
-  padding: 0px 30px;
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
-  gap: 20px;
-}
-.date-tasks li {
-  width: 100% !important;
-}
-
-@media (max-width: 800px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-  }
-  .header-right .add-task-button p {
-    display: none;
-  }
-  .date-header {
-    gap: 20px;
-    justify-content: center;
-  }
-  .date-header .hr {
-    display: none;
-  }
-  .date-header h3 {
-    font-size: 1em;
-  }
-  .date-header button {
-    font-size: 0.6em;
-  }
-  .date-tasks {
-    width: 100px;
-  }
-  .date-tasks li {
-    width: 60% !important;
-  }
-}
-@media (max-width: 500px) {
-  #task-display li {
-    width: 250px !important;
-  }
-}`, "",{"version":3,"sources":["webpack://./src/styles/index.scss","webpack://./src/styles/main.scss","webpack://./src/styles/sidebar.scss","webpack://./src/styles/header.scss","webpack://./src/styles/popup.scss","webpack://./src/styles/task_display.scss","webpack://./src/styles/date.scss","webpack://./src/styles/breakpoints.scss"],"names":[],"mappings":"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","sourcesContent":["/* common reused styles */\n\n@mixin icon-size($pixel) {\n  height: $pixel;\n  width: $pixel;\n}\n\n@mixin button-styling {\n  border: none;\n  background-color: transparent;\n  cursor: pointer;\n}\n\n@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap\");\n\n/* CSS Reset */\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n}\n\nhtml {\n  color-scheme: dark light;\n}\n\nimg,\npicture,\nsvg,\nvideo {\n  display: block;\n  max-width: 100%;\n}\n\n/* Custom CSS */\n\n:root {\n  --primary-color: #38bdf8;\n  --secondary-color: #334155;\n  --third-color: #1e293b;\n  --white-color: #fafafa;\n  --gray-color: #94a3b8;\n\n  &.light {\n    --primary-color: #38bdf8;\n    --secondary-color: #7497c9;\n    --third-color: #5372a3;\n    --gray-color: #abbfda;\n    --primary-button-color: #6c84a4;\n  }\n\n  --primary-color-svg: brightness(0) saturate(100%) invert(60%) sepia(16%)\n    saturate(2562%) hue-rotate(169deg) brightness(107%) contrast(95%);\n  --white-color-svg: brightness(0) saturate(100%) invert(100%) sepia(0%)\n    saturate(0%) hue-rotate(14deg) brightness(105%) contrast(96%);\n\n  --primary-button-color: #475569;\n  --primary-button-hover-color: #53657d;\n  --secondary-button-color: #38bdf8;\n  --secondary-button-hover-color: #7dd3fc;\n}\n\n.not-active {\n  display: none !important;\n}\n\n.content {\n  min-height: 100vh;\n  background-color: var(--third-color);\n  font-family: \"Roboto\", sans-serif;\n\n  display: grid;\n  grid-template:\n    \"sidebar header\" 100px\n    \"sidebar main\" 1fr\n    / 300px 1fr;\n}\n\n.hide-sidebar {\n  grid-template: \"header header\" 100px \"main main\" 1fr / 300px 1fr !important;\n}\n\nh1 {\n  font-family: \"Montserrat\", sans-serif;\n}\n","/* common reused styles */\n@import url(\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap\");\n/* CSS Reset */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n}\n\nhtml {\n  color-scheme: dark light;\n}\n\nimg,\npicture,\nsvg,\nvideo {\n  display: block;\n  max-width: 100%;\n}\n\n/* Custom CSS */\n:root {\n  --primary-color: #38bdf8;\n  --secondary-color: #334155;\n  --third-color: #1e293b;\n  --white-color: #fafafa;\n  --gray-color: #94a3b8;\n  --primary-color-svg: brightness(0) saturate(100%) invert(60%) sepia(16%)\n    saturate(2562%) hue-rotate(169deg) brightness(107%) contrast(95%);\n  --white-color-svg: brightness(0) saturate(100%) invert(100%) sepia(0%)\n    saturate(0%) hue-rotate(14deg) brightness(105%) contrast(96%);\n  --primary-button-color: #475569;\n  --primary-button-hover-color: #53657d;\n  --secondary-button-color: #38bdf8;\n  --secondary-button-hover-color: #7dd3fc;\n}\n:root.light {\n  --primary-color: #38bdf8;\n  --secondary-color: #7497c9;\n  --third-color: #5372a3;\n  --gray-color: #abbfda;\n  --primary-button-color: #6c84a4;\n}\n\n.not-active {\n  display: none !important;\n}\n\n.content {\n  min-height: 100vh;\n  background-color: var(--third-color);\n  font-family: \"Roboto\", sans-serif;\n  display: grid;\n  grid-template: \"sidebar header\" 100px \"sidebar main\" 1fr/300px 1fr;\n}\n\n.hide-sidebar {\n  grid-template: \"header header\" 100px \"main main\" 1fr/300px 1fr !important;\n}\n\nh1 {\n  font-family: \"Montserrat\", sans-serif;\n}\n\n/* Sidebar general */\n.sidebar {\n  grid-area: sidebar;\n  padding: 40px;\n  background-color: var(--secondary-color);\n  border-right: 1px solid var(--gray-color);\n}\n.sidebar h2 {\n  color: var(--gray-color);\n  margin-top: 30px;\n  margin-bottom: 20px;\n}\n\n/* Sidebar top */\n.sidebar-top {\n  margin-bottom: 100px;\n}\n.sidebar-top img {\n  filter: var(--primary-color-svg);\n  width: 22px;\n}\n.sidebar-top .banner {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.sidebar-top .banner h1 {\n  font-size: 2.1em;\n}\n.sidebar-top .banner img {\n  width: 34px;\n}\n.sidebar-top ul {\n  list-style: none;\n}\n.sidebar-top ul li {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  margin-bottom: 20px;\n  cursor: pointer;\n  transition: transform 0.3s;\n}\n.sidebar-top ul li:hover {\n  transform: translate(5px);\n}\n.sidebar-top ul li p {\n  font-size: 1.1em;\n}\n.sidebar-top .create-project {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  border: none;\n  background-color: transparent;\n  cursor: pointer;\n  padding: 10px 20px;\n  margin-left: 10px;\n  border-radius: 10px;\n  transition: background-color 0.3s;\n}\n.sidebar-top .create-project img {\n  width: 18px;\n  border: 2px solid var(--primary-color);\n  border-radius: 100%;\n}\n.sidebar-top .create-project p {\n  font-size: 0.8em;\n}\n.sidebar-top .create-project:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n/* Sidebar bottom */\n.sidebar-bottom {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  gap: 30px;\n}\n.sidebar-bottom img {\n  filter: var(--white-color-svg);\n}\n.sidebar-bottom .light-dark-mode {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 15px;\n}\n.sidebar-bottom .light-dark-mode img {\n  width: 25px;\n}\n.sidebar-bottom .collapse {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 5px;\n  padding: 10px 20px;\n  background-color: var(--primary-button-color);\n  border-radius: 10px;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n.sidebar-bottom .collapse img {\n  width: 20px;\n}\n.sidebar-bottom .collapse p {\n  font-size: 0.9em;\n}\n.sidebar-bottom .collapse:hover {\n  background-color: var(--primary-button-hover-color);\n}\n.sidebar-bottom footer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.sidebar-bottom footer a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 5px;\n  text-decoration: none;\n  color: var(--white-color);\n}\n.sidebar-bottom footer img {\n  width: 20px;\n}\n\n/* light and dark mode switch */\n/* The switch - the box around the slider */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 42px;\n  height: 24.33px;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: var(--primary-color);\n  border-radius: 23.3px;\n  -webkit-transition: 0.4s;\n  transition: 0.4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 16.66px;\n  width: 16.66px;\n  border-radius: 50%;\n  left: 20.66px;\n  bottom: 4px;\n  background-color: white;\n  -webkit-transition: 0.4s;\n  transition: 0.4s;\n}\n\ninput:checked + .slider {\n  background-color: var(--gray-color);\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px var(--gray-color);\n}\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(-16.66px);\n  -ms-transform: translateX(-16.66px);\n  transform: translateX(-16.66px);\n}\n\nheader {\n  grid-area: header;\n  background-color: var(--secondary-color);\n  border-bottom: 1px solid var(--gray-color);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0px 40px;\n}\nheader h2 {\n  font-size: 1.8em;\n}\nheader .hamburger-menu {\n  background-color: var(--primary-button-color);\n  border-radius: 100%;\n  padding: 10px;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\nheader .hamburger-menu:hover {\n  background-color: var(--primary-button-hover-color);\n}\nheader img {\n  width: 25px;\n  filter: var(--white-color-svg);\n}\n\n.header-right {\n  display: flex;\n  gap: 20px;\n}\n.header-right .add-task-button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: var(--secondary-button-color);\n  padding: 8px 16px;\n  border-radius: 20px;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.2s;\n}\n.header-right .add-task-button:hover {\n  background-color: var(--secondary-button-hover-color);\n}\n.header-right .edit-project-button {\n  background-color: var(--primary-button-color);\n  border-radius: 100%;\n  padding: 10px;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n.header-right .edit-project-button:hover {\n  background-color: var(--primary-button-hover-color);\n}\n\n.popup {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%) scale(0);\n  z-index: 10;\n  width: 400px;\n  padding: 20px;\n  border-radius: 10px;\n  background-color: var(--secondary-color);\n}\n\n.active {\n  transform: translate(-50%, -50%) scale(1);\n}\n\n.popup-header {\n  margin-bottom: 16px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.popup-header h2 {\n  font-size: 1.2em;\n  font-weight: bold;\n}\n.popup-header button {\n  background-color: var(--primary-button-color) !important;\n  padding: 5px;\n  border: none;\n  cursor: pointer;\n  border-radius: 100%;\n  transition: background-color 0.3s;\n}\n.popup-header button img {\n  width: 15px;\n  filter: var(--white-color-svg);\n}\n.popup-header button:hover {\n  background-color: var(--primary-button-hover-color) !important;\n}\n\nform {\n  display: grid;\n  grid-template-columns: 1fr;\n  padding: 0px 6px;\n}\nform label {\n  margin-bottom: 8px;\n  font-size: 0.9em;\n}\nform input,\nform textarea,\nform select {\n  padding: 10px;\n  border-radius: 5px;\n  border: 1px solid var(--gray-color);\n  margin-bottom: 20px;\n  font-size: 0.9em;\n}\n\ninput:focus {\n  outline: none;\n  padding: 9px;\n  cursor: pointer;\n  border: 2px solid var(--primary-color);\n}\n\ninput[type=submit] {\n  padding: 10px;\n  font-size: 1.1em;\n  font-weight: bold;\n  border-radius: 20px;\n  border: none;\n  cursor: pointer;\n  background-color: var(--secondary-button-color);\n  color: var(--white-color);\n  transition: background-color 0.3s;\n}\n\ninput[type=submit]:hover {\n  background-color: var(--secondary-button-hover-color);\n}\n\n.overlay {\n  position: fixed;\n  display: none;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n  width: 10000px;\n  height: 10000px;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n  z-index: 9;\n}\n\n.overlay.active {\n  display: block;\n  pointer-events: all;\n}\n\n#opened-task {\n  width: 380px !important;\n  padding: 40px 30px;\n}\n#opened-task img {\n  width: 20px;\n}\n#opened-task #opened-task-status {\n  color: var(--gray-color);\n  font-size: 0.8em;\n}\n#opened-task #opened-task-title {\n  font-size: 1.4em;\n}\n#opened-task #opened-task-description {\n  color: var(--gray-color);\n  margin-top: 15px;\n  margin-bottom: 20px;\n}\n#opened-task #opened-task-due {\n  width: 120px;\n  background-color: var(--primary-button-color);\n  padding: 6px 12px;\n  border-radius: 20px;\n  font-size: 0.9em;\n  margin-bottom: 10px;\n}\n#opened-task #opened-task-priority {\n  width: 120px;\n  display: flex;\n  gap: 4px;\n  font-size: 0.9em;\n  background-color: var(--primary-button-color);\n  padding: 6px 12px;\n  border-radius: 20px;\n  margin-bottom: 30px;\n}\n#opened-task #opened-task-priority img {\n  width: 14px;\n}\n#opened-task #opened-task-priority .low {\n  filter: var(--white-color-svg);\n}\n#opened-task #opened-task-priority .med {\n  filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%);\n}\n#opened-task #opened-task-priority .high {\n  filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%);\n}\n#opened-task #opened-task-footer {\n  display: flex;\n  gap: 10px;\n}\n#opened-task #opened-task-footer > * {\n  border: none;\n  background-color: var(--secondary-button-color);\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n#opened-task #opened-task-footer > *:hover {\n  background-color: var(--secondary-button-hover-color);\n}\n#opened-task #opened-task-footer #opened-task-main {\n  border-radius: 24px;\n  padding: 0px 40px;\n  font-size: 1.2em;\n}\n#opened-task #opened-task-footer #opened-task-edit,\n#opened-task #opened-task-footer #opened-task-close {\n  padding: 8px;\n  border-radius: 50%;\n  margin-right: 10px;\n}\n#opened-task #opened-task-footer #opened-task-edit img,\n#opened-task #opened-task-footer #opened-task-close img {\n  filter: var(--white-color-svg);\n  width: 24px;\n}\n\nmain {\n  grid-area: main;\n  padding: 40px 80px;\n}\n\n#task-display .project-render-task {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n  gap: 20px;\n}\n#task-display h3 {\n  margin-bottom: 20px;\n  font-weight: bold;\n  color: var(--gray-color);\n}\n#task-display ul {\n  display: flex;\n  flex-direction: column;\n  gap: 30px;\n  list-style: none;\n}\n#task-display ul h4 {\n  font-size: 1.2em;\n}\n#task-display ul li {\n  background-color: var(--secondary-color);\n  padding: 15px 20px;\n  width: 280px;\n  border-radius: 8px;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n  cursor: pointer;\n  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n  transition: transform 0.3s, box-shadow 0.3s;\n}\n#task-display ul li:hover {\n  transform: translateY(-3px);\n  box-shadow: rgba(0, 0, 0, 0.36) 0px 6px 16px;\n}\n#task-display ul li .task-footer {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font-size: 0.8em;\n}\n#task-display ul li .task-footer .task-priority {\n  display: flex;\n  gap: 4px;\n  background-color: var(--primary-button-color);\n  padding: 4px 8px;\n  border-radius: 20px;\n}\n#task-display ul li .task-footer .task-priority img {\n  width: 14px;\n}\n#task-display ul li .task-footer .task-due-date {\n  color: var(--gray-color);\n}\n#task-display ul li .task-footer .low {\n  filter: var(--white-color-svg);\n}\n#task-display ul li .task-footer .med {\n  filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%);\n}\n#task-display ul li .task-footer .high {\n  filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%);\n}\n\n#todo h3::before {\n  content: \"\";\n  width: 10px;\n  height: 10px;\n  border-radius: 100%;\n  background-color: var(--primary-color);\n  display: inline-block;\n  margin-right: 5px;\n}\n\n#done h3::before {\n  content: \"\";\n  width: 10px;\n  height: 10px;\n  border-radius: 100%;\n  background-color: #6ee7b7;\n  display: inline-block;\n  margin-right: 5px;\n}\n\n.date-container {\n  padding: 10px;\n  margin-bottom: 100px;\n}\n\n.date-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 50px;\n  margin-bottom: 40px;\n}\n.date-header h3 {\n  font-size: 1.3em;\n  white-space: nowrap;\n  height: 5px;\n}\n.date-header button {\n  padding: 7px 17px;\n  border-radius: 17px;\n  border: none;\n  background-color: var(--secondary-button-color);\n  font-size: 0.8em;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n.date-header button:hover {\n  background-color: var(--secondary-button-hover-color);\n}\n\n.hr {\n  height: 1px;\n  background-color: var(--gray-color);\n  flex: auto;\n}\n\n.date-tasks {\n  padding: 0px 30px;\n  display: grid !important;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;\n  gap: 20px;\n}\n.date-tasks li {\n  width: 100% !important;\n}\n\n@media (max-width: 800px) {\n  header {\n    display: flex;\n    flex-direction: column;\n    align-items: start;\n    justify-content: center;\n  }\n  .header-right .add-task-button p {\n    display: none;\n  }\n  .date-header {\n    gap: 20px;\n    justify-content: center;\n  }\n  .date-header .hr {\n    display: none;\n  }\n  .date-header h3 {\n    font-size: 1em;\n  }\n  .date-header button {\n    font-size: 0.6em;\n  }\n  .date-tasks {\n    width: 100px;\n  }\n  .date-tasks li {\n    width: 60% !important;\n  }\n}\n@media (max-width: 500px) {\n  #task-display li {\n    width: 250px !important;\n  }\n}","@use \"index\";\n\n/* Sidebar general */\n.sidebar {\n  grid-area: sidebar;\n  padding: 40px;\n  background-color: var(--secondary-color);\n  border-right: 1px solid var(--gray-color);\n\n  h2 {\n    color: var(--gray-color);\n    margin-top: 30px;\n    margin-bottom: 20px;\n  }\n}\n\n/* Sidebar top */\n.sidebar-top {\n  margin-bottom: 100px;\n  img {\n    filter: var(--primary-color-svg);\n    width: 22px;\n  }\n\n  .banner {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n\n    h1 {\n      font-size: 2.1em;\n    }\n\n    img {\n      width: 34px;\n    }\n  }\n\n  ul {\n    list-style: none;\n\n    li {\n      display: flex;\n      align-items: center;\n      gap: 10px;\n      margin-bottom: 20px;\n      cursor: pointer;\n      transition: transform 0.3s;\n\n      &:hover {\n        transform: translate(5px);\n      }\n\n      p {\n        font-size: 1.1em;\n      }\n    }\n  }\n\n  .create-project {\n    @include index.flex-center;\n    gap: 10px;\n    @include index.button-styling;\n\n    padding: 10px 20px;\n    margin-left: 10px;\n    border-radius: 10px;\n\n    transition: background-color 0.3s;\n\n    img {\n      width: 18px;\n      border: 2px solid var(--primary-color);\n      border-radius: 100%;\n    }\n\n    p {\n      font-size: 0.8em;\n    }\n\n    &:hover {\n      background-color: rgba(0, 0, 0, 0.3);\n    }\n  }\n}\n\n/* Sidebar bottom */\n.sidebar-bottom {\n  @include index.flex-center;\n  flex-direction: column;\n  gap: 30px;\n\n  img {\n    filter: var(--white-color-svg);\n  }\n\n  .light-dark-mode {\n    @include index.flex-center;\n    gap: 15px;\n    img {\n      width: 25px;\n    }\n  }\n\n  .collapse {\n    @include index.flex-center;\n    gap: 5px;\n    padding: 10px 20px;\n\n    background-color: var(--primary-button-color);\n    border-radius: 10px;\n    border: none;\n    cursor: pointer;\n    transition: background-color 0.3s;\n\n    img {\n      width: 20px;\n    }\n\n    p {\n      font-size: 0.9em;\n    }\n\n    &:hover {\n      background-color: var(--primary-button-hover-color);\n    }\n  }\n\n  footer {\n    @include index.flex-center;\n\n    a {\n      @include index.flex-center;\n      gap: 5px;\n\n      text-decoration: none;\n      color: var(--white-color);\n    }\n\n    img {\n      width: 20px;\n    }\n  }\n}\n\n/* light and dark mode switch */\n/* The switch - the box around the slider */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 42px;\n  height: 24.33px;\n}\n\n/* Hide default HTML checkbox */\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: var(--primary-color);\n  border-radius: 23.3px;\n  -webkit-transition: 0.4s;\n  transition: 0.4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 16.66px;\n  width: 16.66px;\n  border-radius: 50%;\n  left: 20.66px;\n  bottom: 4px;\n  background-color: white;\n  -webkit-transition: 0.4s;\n  transition: 0.4s;\n}\n\ninput:checked + .slider {\n  background-color: var(--gray-color);\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px var(--gray-color);\n}\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(-16.66px);\n  -ms-transform: translateX(-16.66px);\n  transform: translateX(-16.66px);\n}\n","@use \"index\";\n\nheader {\n  grid-area: header;\n  background-color: var(--secondary-color);\n  border-bottom: 1px solid var(--gray-color);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0px 40px;\n\n  h2 {\n    font-size: 1.8em;\n  }\n  .hamburger-menu {\n    background-color: var(--primary-button-color);\n    border-radius: 100%;\n    padding: 10px;\n    border: none;\n    cursor: pointer;\n    transition: background-color 0.3s;\n\n    &:hover {\n      background-color: var(--primary-button-hover-color);\n    }\n  }\n  img {\n    width: 25px;\n\n    filter: var(--white-color-svg);\n  }\n}\n\n.header-right {\n  display: flex;\n  gap: 20px;\n\n  .add-task-button {\n    @include index.flex-center;\n\n    background-color: var(--secondary-button-color);\n    padding: 8px 16px;\n    border-radius: 20px;\n    border: none;\n    cursor: pointer;\n    transition: background-color 0.2s;\n\n    &:hover {\n      background-color: var(--secondary-button-hover-color);\n    }\n  }\n\n  .edit-project-button {\n    background-color: var(--primary-button-color);\n    border-radius: 100%;\n    padding: 10px;\n    border: none;\n    cursor: pointer;\n    transition: background-color 0.3s;\n\n    &:hover {\n      background-color: var(--primary-button-hover-color);\n    }\n  }\n}\n","@use \"index\";\n\n.popup {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%) scale(0);\n  z-index: 10;\n\n  width: 400px;\n  padding: 20px;\n  border-radius: 10px;\n  background-color: var(--secondary-color);\n}\n\n.active {\n  transform: translate(-50%, -50%) scale(1);\n}\n\n.popup-header {\n  margin-bottom: 16px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n\n  h2 {\n    font-size: 1.2em;\n    font-weight: bold;\n  }\n\n  button {\n    background-color: var(--primary-button-color) !important;\n    padding: 5px;\n    border: none;\n    cursor: pointer;\n    border-radius: 100%;\n    transition: background-color 0.3s;\n\n    img {\n      width: 15px;\n      filter: var(--white-color-svg);\n    }\n\n    &:hover {\n      background-color: var(--primary-button-hover-color) !important;\n    }\n  }\n}\n\nform {\n  display: grid;\n  grid-template-columns: 1fr;\n\n  padding: 0px 6px;\n\n  label {\n    margin-bottom: 8px;\n    font-size: 0.9em;\n  }\n  input,\n  textarea,\n  select {\n    padding: 10px;\n    border-radius: 5px;\n    border: 1px solid var(--gray-color);\n    margin-bottom: 20px;\n    font-size: 0.9em;\n  }\n}\n\ninput:focus {\n  outline: none;\n  padding: 9px;\n  cursor: pointer;\n  border: 2px solid var(--primary-color);\n}\n\ninput[type=\"submit\"] {\n  padding: 10px;\n  font-size: 1.1em;\n  font-weight: bold;\n  border-radius: 20px;\n  border: none;\n  cursor: pointer;\n  background-color: var(--secondary-button-color);\n  color: var(--white-color);\n  transition: background-color 0.3s;\n}\n\ninput[type=\"submit\"]:hover {\n  background-color: var(--secondary-button-hover-color);\n}\n\n.overlay {\n  position: fixed;\n  display: none;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n  width: 10000px;\n  height: 10000px;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n  z-index: 9;\n}\n\n.overlay.active {\n  display: block;\n  pointer-events: all;\n}\n\n#opened-task {\n  width: 380px !important;\n  padding: 40px 30px;\n  img {\n    width: 20px;\n  }\n  #opened-task-status {\n    color: var(--gray-color);\n    font-size: 0.8em;\n  }\n  #opened-task-title {\n    font-size: 1.4em;\n  }\n  #opened-task-description {\n    color: var(--gray-color);\n    margin-top: 15px;\n    margin-bottom: 20px;\n  }\n  #opened-task-due {\n    width: 120px;\n    background-color: var(--primary-button-color);\n    padding: 6px 12px;\n    border-radius: 20px;\n    font-size: 0.9em;\n    margin-bottom: 10px;\n  }\n  #opened-task-priority {\n    width: 120px;\n    display: flex;\n    gap: 4px;\n    font-size: 0.9em;\n    background-color: var(--primary-button-color);\n    padding: 6px 12px;\n    border-radius: 20px;\n    margin-bottom: 30px;\n\n    img {\n      width: 14px;\n    }\n\n    .low {\n      filter: var(--white-color-svg);\n    }\n    .med {\n      filter: brightness(0) saturate(100%) invert(55%) sepia(96%)\n        saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%); //orange\n    }\n    .high {\n      filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(792%)\n        hue-rotate(320deg) brightness(107%) contrast(109%); //red\n    }\n  }\n  #opened-task-footer {\n    display: flex;\n    gap: 10px;\n    & > * {\n      border: none;\n      background-color: var(--secondary-button-color);\n      cursor: pointer;\n      transition: background-color 0.3s;\n\n      &:hover {\n        background-color: var(--secondary-button-hover-color);\n      }\n    }\n\n    #opened-task-main {\n      border-radius: 24px;\n      padding: 0px 40px;\n      font-size: 1.2em;\n    }\n    #opened-task-edit,\n    #opened-task-close {\n      padding: 8px;\n      border-radius: 50%;\n      margin-right: 10px;\n\n      img {\n        filter: var(--white-color-svg);\n        width: 24px;\n      }\n    }\n  }\n}\n","main {\n  grid-area: main;\n  padding: 40px 80px;\n}\n\n#task-display {\n  .project-render-task {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n    gap: 20px;\n  }\n\n  h3 {\n    margin-bottom: 20px;\n    font-weight: bold;\n    color: var(--gray-color);\n  }\n\n  ul {\n    display: flex;\n    flex-direction: column;\n    gap: 30px;\n    list-style: none;\n\n    h4 {\n      font-size: 1.2em;\n    }\n\n    li {\n      background-color: var(--secondary-color);\n      padding: 15px 20px;\n      width: 280px;\n      border-radius: 8px;\n      display: flex;\n      flex-direction: column;\n      gap: 20px;\n\n      cursor: pointer;\n      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n      transition: transform 0.3s, box-shadow 0.3s;\n\n      &:hover {\n        transform: translateY(-3px);\n        box-shadow: rgba(0, 0, 0, 0.36) 0px 6px 16px;\n      }\n\n      .task-footer {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        font-size: 0.8em;\n\n        .task-priority {\n          display: flex;\n          gap: 4px;\n\n          background-color: var(--primary-button-color);\n          padding: 4px 8px;\n          border-radius: 20px;\n\n          img {\n            width: 14px;\n          }\n        }\n        .task-due-date {\n          color: var(--gray-color);\n        }\n\n        .low {\n          filter: var(--white-color-svg);\n        }\n        .med {\n          filter: brightness(0) saturate(100%) invert(55%) sepia(96%)\n            saturate(2343%) hue-rotate(348deg) brightness(97%) contrast(102%); //orange\n        }\n        .high {\n          filter: brightness(0) saturate(100%) invert(32%) sepia(83%)\n            saturate(792%) hue-rotate(320deg) brightness(107%) contrast(109%); //red\n        }\n      }\n    }\n  }\n}\n\n#todo h3::before {\n  content: \"\";\n  width: 10px;\n  height: 10px;\n  border-radius: 100%;\n  background-color: var(--primary-color);\n  display: inline-block;\n  margin-right: 5px;\n}\n\n#done h3::before {\n  content: \"\";\n  width: 10px;\n  height: 10px;\n  border-radius: 100%;\n  background-color: #6ee7b7;\n  display: inline-block;\n  margin-right: 5px;\n}\n","@use \"index\";\n\n.date-container {\n  padding: 10px;\n  margin-bottom: 100px;\n}\n\n.date-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 50px;\n  margin-bottom: 40px;\n\n  h3 {\n    font-size: 1.3em;\n    white-space: nowrap;\n    height: 5px;\n  }\n\n  button {\n    padding: 7px 17px;\n    border-radius: 17px;\n    border: none;\n    background-color: var(--secondary-button-color);\n    font-size: 0.8em;\n    cursor: pointer;\n    transition: background-color 0.3s;\n\n    &:hover {\n      background-color: var(--secondary-button-hover-color);\n    }\n  }\n}\n\n.hr {\n  height: 1px;\n  background-color: var(--gray-color);\n  flex: auto;\n}\n\n.date-tasks {\n  padding: 0px 30px;\n  display: grid !important;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;\n  gap: 20px;\n\n  li {\n    width: 100% !important;\n  }\n}\n","@media (max-width: 800px) {\n  header {\n    display: flex;\n    flex-direction: column;\n    align-items: start;\n    justify-content: center;\n  }\n  .header-right {\n    .add-task-button {\n      p {\n        display: none;\n      }\n    }\n  }\n\n  .date-header {\n    gap: 20px;\n    justify-content: center;\n\n    .hr {\n      display: none;\n    }\n    h3 {\n      font-size: 1em;\n    }\n    button {\n      font-size: 0.6em;\n    }\n  }\n\n  .date-tasks {\n    width: 100px;\n    li {\n      width: 60% !important;\n    }\n  }\n}\n\n@media (max-width: 500px) {\n  #task-display {\n    li {\n      width: 250px !important;\n    }\n  }\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-module.exports = function (cssWithMappingToString) {
-  var list = [];
-
-  // return the list of modules as css string
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = "";
-      var needLayer = typeof item[5] !== "undefined";
-      if (item[4]) {
-        content += "@supports (".concat(item[4], ") {");
-      }
-      if (item[2]) {
-        content += "@media ".concat(item[2], " {");
-      }
-      if (needLayer) {
-        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
-      }
-      content += cssWithMappingToString(item);
-      if (needLayer) {
-        content += "}";
-      }
-      if (item[2]) {
-        content += "}";
-      }
-      if (item[4]) {
-        content += "}";
-      }
-      return content;
-    }).join("");
-  };
-
-  // import a list of modules into the list
-  list.i = function i(modules, media, dedupe, supports, layer) {
-    if (typeof modules === "string") {
-      modules = [[null, modules, undefined]];
-    }
-    var alreadyImportedModules = {};
-    if (dedupe) {
-      for (var k = 0; k < this.length; k++) {
-        var id = this[k][0];
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-    for (var _k = 0; _k < modules.length; _k++) {
-      var item = [].concat(modules[_k]);
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        continue;
-      }
-      if (typeof layer !== "undefined") {
-        if (typeof item[5] === "undefined") {
-          item[5] = layer;
-        } else {
-          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
-          item[5] = layer;
-        }
-      }
-      if (media) {
-        if (!item[2]) {
-          item[2] = media;
-        } else {
-          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
-          item[2] = media;
-        }
-      }
-      if (supports) {
-        if (!item[4]) {
-          item[4] = "".concat(supports);
-        } else {
-          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
-          item[4] = supports;
-        }
-      }
-      list.push(item);
-    }
-  };
-  return list;
-};
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
-  \************************************************************/
-/***/ ((module) => {
-
-
-
-module.exports = function (item) {
-  var content = item[1];
-  var cssMapping = item[3];
-  if (!cssMapping) {
-    return content;
-  }
-  if (typeof btoa === "function") {
-    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
-    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-    var sourceMapping = "/*# ".concat(data, " */");
-    return [content].concat([sourceMapping]).join("\n");
-  }
-  return [content].join("\n");
-};
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nTypeError: Cannot read properties of undefined (reading 'indexOf')\n    at C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:115615:12\n    at Object.applyHooksTransformer (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:1863:14)\n    at Object.initHooks (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:1843:251)\n    at Object.initNativeDispatchContinue (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:1809:9)\n    at Object.initNativeDispatch (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:1803:9)\n    at Object.getNativeInterceptor (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:28982:13)\n    at Object.getInterceptor$x (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:29243:16)\n    at Object.set$compile$x (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:29307:16)\n    at Object.main (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:24128:9)\n    at main2 (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:25922:9)\n    at C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:116680:7\n    at C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:116659:7\n    at dartProgram (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:116674:5)\n    at _cliPkgExports.load (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.dart.js:116682:3)\n    at Object.<anonymous> (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass\\sass.node.js:4:9)\n    at Module._compile (node:internal/modules/cjs/loader:1369:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1427:10)\n    at Module.load (node:internal/modules/cjs/loader:1201:32)\n    at Module._load (node:internal/modules/cjs/loader:1017:12)\n    at Module.require (node:internal/modules/cjs/loader:1229:19)\n    at require (node:internal/modules/helpers:177:18)\n    at getDefaultSassImplementation (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass-loader\\dist\\utils.js:37:10)\n    at getSassImplementation (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass-loader\\dist\\utils.js:46:30)\n    at Object.loader (C:\\Users\\Ludvi\\repos\\To-Do-List\\node_modules\\sass-loader\\dist\\index.js:23:55)");
 
 /***/ }),
 
@@ -1511,6 +828,7 @@ module.exports = function (item) {
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getDefaultOptions: () => (/* binding */ getDefaultOptions),
@@ -1532,6 +850,7 @@ function setDefaultOptions(newOptions) {
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ requiredArgs)
@@ -1550,6 +869,7 @@ function requiredArgs(required, args) {
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ toInteger)
@@ -1573,6 +893,7 @@ function toInteger(dirtyNumber) {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ addDays)
@@ -1624,6 +945,7 @@ function addDays(dirtyDate, dirtyAmount) {
   \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isSameDay)
@@ -1675,6 +997,7 @@ function isSameDay(dirtyDateLeft, dirtyDateRight) {
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isSameWeek)
@@ -1733,6 +1056,7 @@ function isSameWeek(dirtyDateLeft, dirtyDateRight, options) {
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isThisWeek)
@@ -1786,6 +1110,7 @@ function isThisWeek(dirtyDate, options) {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isToday)
@@ -1828,6 +1153,7 @@ function isToday(dirtyDate) {
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfDay)
@@ -1869,6 +1195,7 @@ function startOfDay(dirtyDate) {
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfWeek)
@@ -1934,6 +1261,7 @@ function startOfWeek(dirtyDate, options) {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ subDays)
@@ -1976,6 +1304,7 @@ function subDays(dirtyDate, dirtyAmount) {
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ toDate)
@@ -2043,6 +1372,7 @@ function toDate(argument) {
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2080,7 +1410,7 @@ var ___HTML_LOADER_REPLACEMENT_10___ = _node_modules_html_loader_dist_runtime_ge
 var ___HTML_LOADER_REPLACEMENT_11___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_11___);
 var ___HTML_LOADER_REPLACEMENT_12___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_12___);
 var ___HTML_LOADER_REPLACEMENT_13___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_13___);
-var code = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>TaskStack</title>\n  </head>\n  <body>\n    <section class=\"content\">\n      <section class=\"sidebar\">\n        <div class=\"sidebar-top\">\n          <div class=\"banner\">\n            <img\n              src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\"\n              alt=\"stack-of-sheets\"\n            />\n            <h1>TaskStack</h1>\n          </div>\n          <div class=\"due\">\n            <h2>DUE</h2>\n            <ul>\n              <li id=\"today-tasks\">\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_1___ + "\" alt=\"today\" />\n                <p>Today</p>\n              </li>\n              <li id=\"week-tasks\">\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_2___ + "\" alt=\"week\" />\n                <p>This Week</p>\n              </li>\n              <li id=\"all-tasks\">\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_3___ + "\" alt=\"all-time\" />\n                <p>All Time</p>\n              </li>\n            </ul>\n          </div>\n          <div class=\"projects\">\n            <h2 class=\"projects-title\"></h2>\n            <ul class=\"projects-list\"></ul>\n            <button class=\"create-project\">\n              <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" alt=\"plus\" />\n              <p>CREATE PROJECT</p>\n            </button>\n          </div>\n        </div>\n        <div class=\"sidebar-bottom\">\n          <div class=\"light-dark-mode\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_5___ + "\" alt=\"day\" />\n            <label class=\"switch\">\n              <input type=\"checkbox\" />\n              <span class=\"slider\"></span>\n            </label>\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_6___ + "\" alt=\"moon\" />\n          </div>\n          <div class=\"collapse\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_7___ + "\" alt=\"arrow\" />\n            <p>COLLAPSE</p>\n          </div>\n          <footer>\n            <a href=\"https://github.com/Berget1411\">\n              <p>Made by Berget</p>\n              <img src=\"" + ___HTML_LOADER_REPLACEMENT_8___ + "\" alt=\"github-icon\" />\n            </a>\n          </footer>\n        </div>\n      </section>\n      <header>\n        <div class=\"header-left\">\n          <h2></h2>\n        </div>\n        <div class=\"header-right\">\n          <button class=\"add-task-button not-active\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" alt=\"add\" />\n            <p>Add Task</p>\n          </button>\n          <button class=\"edit-project-button not-active\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" alt=\"edit\" />\n          </button>\n          <button class=\"hamburger-menu not-active\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_10___ + "\" alt=\"hamburger-menu\" />\n          </button>\n        </div>\n      </header>\n      <main>\n        <div id=\"task-display\" class=\"not-active\"></div>\n      </main>\n    </section>\n\n    <!-- popups -->\n    <section class=\"popup\" id=\"add-project-popup\">\n      <div class=\"popup-header\">\n        <h2>Create New Project</h2>\n        <button class=\"close-add-project-form\">\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\n        </button>\n      </div>\n      <form action=\"\">\n        <label for=\"add-project-title-input\">Title</label>\n        <input type=\"text\" id=\"add-project-input\" required />\n        <input type=\"submit\" value=\"Create Project\" class=\"submit-form\" />\n      </form>\n    </section>\n    <section class=\"popup\" id=\"edit-project-popup\">\n      <div class=\"popup-header\">\n        <h2>Edit Project</h2>\n        <div>\n          <button class=\"close-edit-project-form\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\n          </button>\n          <button class=\"delete-project\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" alt=\"trash\" />\n          </button>\n        </div>\n      </div>\n      <form action=\"\">\n        <label for=\"add-project-title-input\">Title</label>\n        <input type=\"text\" id=\"edit-project-input\" required />\n        <input type=\"submit\" value=\"Confirm Edit\" class=\"submit-form\" />\n      </form>\n    </section>\n    <section class=\"popup\" id=\"add-task-popup\">\n      <div class=\"popup-header\">\n        <h2>Create New Task</h2>\n        <button id=\"close-add-task-popup\">\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\n        </button>\n      </div>\n      <form action=\"\">\n        <label for=\"input-add-task-title\">Title</label>\n        <input\n          type=\"text\"\n          id=\"input-add-task-title\"\n          placeholder=\"e.g. Grocery Shopping\"\n        />\n        <label for=\"input-add-task-descrip\">Description</label>\n        <textarea\n          id=\"input-add-task-descrip\"\n          rows=\"7\"\n          minlength=\"5\"\n          ,\n          maxlength=\"210\"\n          placeholder=\"e.g. Go to the nearest supermarket and buy food, household items, and other necessities for the coming week.\"\n          required\n        ></textarea>\n        <label for=\"input-add-task-due-date\">Due Date</label>\n        <input type=\"date\" id=\"input-add-task-due-date\" required />\n        <label for=\"input-add-task-priority\">Priority</label>\n        <select id=\"input-add-task-priority\">\n          <option value=\"low\">Low</option>\n          <option value=\"med\">Medium</option>\n          <option value=\"high\">High</option>\n        </select>\n        <input type=\"submit\" value=\"Create Task\" class=\"submit-form\" />\n      </form>\n    </section>\n    <section class=\"popup\" id=\"opened-task\">\n      <p id=\"opened-task-status\"></p>\n      <h3 id=\"opened-task-title\"></h3>\n      <p id=\"opened-task-description\"></p>\n      <p id=\"opened-task-due\"></p>\n      <div id=\"opened-task-priority\">\n        <img src=\"" + ___HTML_LOADER_REPLACEMENT_13___ + "\" alt=\"flag\" />\n        <p></p>\n      </div>\n      <div id=\"opened-task-footer\">\n        <button id=\"opened-task-main\"></button>\n        <button id=\"opened-task-edit\">\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" alt=\"edit\" />\n        </button>\n        <button id=\"opened-task-close\">\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\n        </button>\n      </div>\n    </section>\n    <section class=\"popup\" id=\"edit-task\">\n      <div class=\"popup-header\">\n        <h2>Edit Task</h2>\n        <div>\n          <button id=\"close-edit-task-popup\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\n          </button>\n          <button id=\"delete-task-edit-popup\">\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" alt=\"trash\" />\n          </button>\n        </div>\n      </div>\n      <form action=\"\">\n        <label for=\"input-edit-task-title\">Title</label>\n        <input\n          type=\"text\"\n          id=\"input-edit-task-title\"\n          placeholder=\"e.g. Grocery Shopping\"\n        />\n        <label for=\"input-edit-task-descrip\">Description</label>\n        <textarea\n          id=\"input-edit-task-descrip\"\n          rows=\"7\"\n          minlength=\"5\"\n          ,\n          maxlength=\"210\"\n          placeholder=\"e.g. Go to the nearest supermarket and buy food, household items, and other necessities for the coming week.\"\n          required\n        ></textarea>\n        <label for=\"input-edit-task-due-date\">Due Date</label>\n        <input type=\"date\" id=\"input-edit-task-due-date\" required />\n        <label for=\"input-edit-task-priority\">Priority</label>\n        <select id=\"input-edit-task-priority\">\n          <option value=\"low\">Low</option>\n          <option value=\"med\">Medium</option>\n          <option value=\"high\">High</option>\n        </select>\n        <input type=\"submit\" value=\"Confirm Edit\" class=\"submit-form\" />\n      </form>\n    </section>\n    <section class=\"overlay\"></section>\n  </body>\n</html>\n";
+var code = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>TaskStack</title>\r\n  </head>\r\n  <body>\r\n    <section class=\"content\">\r\n      <section class=\"sidebar\">\r\n        <div class=\"sidebar-top\">\r\n          <div class=\"banner\">\r\n            <img\r\n              src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\"\r\n              alt=\"stack-of-sheets\"\r\n            />\r\n            <h1>TaskStack</h1>\r\n          </div>\r\n          <div class=\"due\">\r\n            <h2>DUE</h2>\r\n            <ul>\r\n              <li id=\"today-tasks\">\r\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_1___ + "\" alt=\"today\" />\r\n                <p>Today</p>\r\n              </li>\r\n              <li id=\"week-tasks\">\r\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_2___ + "\" alt=\"week\" />\r\n                <p>This Week</p>\r\n              </li>\r\n              <li id=\"all-tasks\">\r\n                <img src=\"" + ___HTML_LOADER_REPLACEMENT_3___ + "\" alt=\"all-time\" />\r\n                <p>All Time</p>\r\n              </li>\r\n            </ul>\r\n          </div>\r\n          <div class=\"projects\">\r\n            <h2 class=\"projects-title\"></h2>\r\n            <ul class=\"projects-list\"></ul>\r\n            <button class=\"create-project\">\r\n              <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" alt=\"plus\" />\r\n              <p>CREATE PROJECT</p>\r\n            </button>\r\n          </div>\r\n        </div>\r\n        <div class=\"sidebar-bottom\">\r\n          <div class=\"light-dark-mode\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_5___ + "\" alt=\"day\" />\r\n            <label class=\"switch\">\r\n              <input type=\"checkbox\" />\r\n              <span class=\"slider\"></span>\r\n            </label>\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_6___ + "\" alt=\"moon\" />\r\n          </div>\r\n          <div class=\"collapse\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_7___ + "\" alt=\"arrow\" />\r\n            <p>COLLAPSE</p>\r\n          </div>\r\n          <footer>\r\n            <a href=\"https://github.com/Berget1411\">\r\n              <p>Made by Berget</p>\r\n              <img src=\"" + ___HTML_LOADER_REPLACEMENT_8___ + "\" alt=\"github-icon\" />\r\n            </a>\r\n          </footer>\r\n        </div>\r\n      </section>\r\n      <header>\r\n        <div class=\"header-left\">\r\n          <h2></h2>\r\n        </div>\r\n        <div class=\"header-right\">\r\n          <button class=\"add-task-button not-active\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" alt=\"add\" />\r\n            <p>Add Task</p>\r\n          </button>\r\n          <button class=\"edit-project-button not-active\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" alt=\"edit\" />\r\n          </button>\r\n          <button class=\"hamburger-menu not-active\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_10___ + "\" alt=\"hamburger-menu\" />\r\n          </button>\r\n        </div>\r\n      </header>\r\n      <main>\r\n        <div id=\"task-display\" class=\"not-active\"></div>\r\n      </main>\r\n    </section>\r\n\r\n    <!-- popups -->\r\n    <section class=\"popup\" id=\"add-project-popup\">\r\n      <div class=\"popup-header\">\r\n        <h2>Create New Project</h2>\r\n        <button class=\"close-add-project-form\">\r\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\r\n        </button>\r\n      </div>\r\n      <form action=\"\">\r\n        <label for=\"add-project-title-input\">Title</label>\r\n        <input type=\"text\" id=\"add-project-input\" required />\r\n        <input type=\"submit\" value=\"Create Project\" class=\"submit-form\" />\r\n      </form>\r\n    </section>\r\n    <section class=\"popup\" id=\"edit-project-popup\">\r\n      <div class=\"popup-header\">\r\n        <h2>Edit Project</h2>\r\n        <div>\r\n          <button class=\"close-edit-project-form\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\r\n          </button>\r\n          <button class=\"delete-project\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" alt=\"trash\" />\r\n          </button>\r\n        </div>\r\n      </div>\r\n      <form action=\"\">\r\n        <label for=\"add-project-title-input\">Title</label>\r\n        <input type=\"text\" id=\"edit-project-input\" required />\r\n        <input type=\"submit\" value=\"Confirm Edit\" class=\"submit-form\" />\r\n      </form>\r\n    </section>\r\n    <section class=\"popup\" id=\"add-task-popup\">\r\n      <div class=\"popup-header\">\r\n        <h2>Create New Task</h2>\r\n        <button id=\"close-add-task-popup\">\r\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\r\n        </button>\r\n      </div>\r\n      <form action=\"\">\r\n        <label for=\"input-add-task-title\">Title</label>\r\n        <input\r\n          type=\"text\"\r\n          id=\"input-add-task-title\"\r\n          placeholder=\"e.g. Grocery Shopping\"\r\n        />\r\n        <label for=\"input-add-task-descrip\">Description</label>\r\n        <textarea\r\n          id=\"input-add-task-descrip\"\r\n          rows=\"7\"\r\n          minlength=\"5\"\r\n          ,\r\n          maxlength=\"210\"\r\n          placeholder=\"e.g. Go to the nearest supermarket and buy food, household items, and other necessities for the coming week.\"\r\n          required\r\n        ></textarea>\r\n        <label for=\"input-add-task-due-date\">Due Date</label>\r\n        <input type=\"date\" id=\"input-add-task-due-date\" required />\r\n        <label for=\"input-add-task-priority\">Priority</label>\r\n        <select id=\"input-add-task-priority\">\r\n          <option value=\"low\">Low</option>\r\n          <option value=\"med\">Medium</option>\r\n          <option value=\"high\">High</option>\r\n        </select>\r\n        <input type=\"submit\" value=\"Create Task\" class=\"submit-form\" />\r\n      </form>\r\n    </section>\r\n    <section class=\"popup\" id=\"opened-task\">\r\n      <p id=\"opened-task-status\"></p>\r\n      <h3 id=\"opened-task-title\"></h3>\r\n      <p id=\"opened-task-description\"></p>\r\n      <p id=\"opened-task-due\"></p>\r\n      <div id=\"opened-task-priority\">\r\n        <img src=\"" + ___HTML_LOADER_REPLACEMENT_13___ + "\" alt=\"flag\" />\r\n        <p></p>\r\n      </div>\r\n      <div id=\"opened-task-footer\">\r\n        <button id=\"opened-task-main\"></button>\r\n        <button id=\"opened-task-edit\">\r\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" alt=\"edit\" />\r\n        </button>\r\n        <button id=\"opened-task-close\">\r\n          <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\r\n        </button>\r\n      </div>\r\n    </section>\r\n    <section class=\"popup\" id=\"edit-task\">\r\n      <div class=\"popup-header\">\r\n        <h2>Edit Task</h2>\r\n        <div>\r\n          <button id=\"close-edit-task-popup\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" alt=\"close\" />\r\n          </button>\r\n          <button id=\"delete-task-edit-popup\">\r\n            <img src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" alt=\"trash\" />\r\n          </button>\r\n        </div>\r\n      </div>\r\n      <form action=\"\">\r\n        <label for=\"input-edit-task-title\">Title</label>\r\n        <input\r\n          type=\"text\"\r\n          id=\"input-edit-task-title\"\r\n          placeholder=\"e.g. Grocery Shopping\"\r\n        />\r\n        <label for=\"input-edit-task-descrip\">Description</label>\r\n        <textarea\r\n          id=\"input-edit-task-descrip\"\r\n          rows=\"7\"\r\n          minlength=\"5\"\r\n          ,\r\n          maxlength=\"210\"\r\n          placeholder=\"e.g. Go to the nearest supermarket and buy food, household items, and other necessities for the coming week.\"\r\n          required\r\n        ></textarea>\r\n        <label for=\"input-edit-task-due-date\">Due Date</label>\r\n        <input type=\"date\" id=\"input-edit-task-due-date\" required />\r\n        <label for=\"input-edit-task-priority\">Priority</label>\r\n        <select id=\"input-edit-task-priority\">\r\n          <option value=\"low\">Low</option>\r\n          <option value=\"med\">Medium</option>\r\n          <option value=\"high\">High</option>\r\n        </select>\r\n        <input type=\"submit\" value=\"Confirm Edit\" class=\"submit-form\" />\r\n      </form>\r\n    </section>\r\n    <section class=\"overlay\"></section>\r\n  </body>\r\n</html>\r\n";
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
@@ -2092,6 +1422,7 @@ var code = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"U
   \*********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -2127,6 +1458,7 @@ module.exports = function (url, options) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -2144,6 +1476,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./main.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 
       
       
@@ -2165,12 +1501,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()((_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6___default()), options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6___default()) && (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6___default().locals) ? (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_6___default().locals) : undefined);
 
 
 /***/ }),
@@ -2181,6 +1517,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -2274,6 +1611,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -2317,6 +1655,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -2336,6 +1675,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -2355,6 +1695,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -2425,6 +1766,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -2448,6 +1790,7 @@ module.exports = styleTagTransform;
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "all.svg";
 
 /***/ }),
@@ -2458,6 +1801,7 @@ module.exports = __webpack_require__.p + "all.svg";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "close.svg";
 
 /***/ }),
@@ -2468,6 +1812,7 @@ module.exports = __webpack_require__.p + "close.svg";
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "day.svg";
 
 /***/ }),
@@ -2478,6 +1823,7 @@ module.exports = __webpack_require__.p + "day.svg";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "edit.svg";
 
 /***/ }),
@@ -2488,6 +1834,7 @@ module.exports = __webpack_require__.p + "edit.svg";
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "feather.svg";
 
 /***/ }),
@@ -2498,6 +1845,7 @@ module.exports = __webpack_require__.p + "feather.svg";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "flag.svg";
 
 /***/ }),
@@ -2508,6 +1856,7 @@ module.exports = __webpack_require__.p + "flag.svg";
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "github.svg";
 
 /***/ }),
@@ -2518,6 +1867,7 @@ module.exports = __webpack_require__.p + "github.svg";
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "hamburger.svg";
 
 /***/ }),
@@ -2528,6 +1878,7 @@ module.exports = __webpack_require__.p + "hamburger.svg";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "hide_arrow.svg";
 
 /***/ }),
@@ -2538,6 +1889,7 @@ module.exports = __webpack_require__.p + "hide_arrow.svg";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "moon.svg";
 
 /***/ }),
@@ -2548,6 +1900,7 @@ module.exports = __webpack_require__.p + "moon.svg";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "plus.svg";
 
 /***/ }),
@@ -2558,6 +1911,7 @@ module.exports = __webpack_require__.p + "plus.svg";
   \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "stack-of-sheets.svg";
 
 /***/ }),
@@ -2568,6 +1922,7 @@ module.exports = __webpack_require__.p + "stack-of-sheets.svg";
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "sun.svg";
 
 /***/ }),
@@ -2578,6 +1933,7 @@ module.exports = __webpack_require__.p + "sun.svg";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "trash.svg";
 
 /***/ }),
@@ -2588,6 +1944,7 @@ module.exports = __webpack_require__.p + "trash.svg";
   \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "week.svg";
 
 /***/ }),
@@ -2598,6 +1955,7 @@ module.exports = __webpack_require__.p + "week.svg";
   \***********************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ _typeof)
@@ -2620,4 +1978,4 @@ function _typeof(o) {
 /******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"));
 /******/ }
 ]);
-//# sourceMappingURL=bundle736e9715ec43260ed367.js.map
+//# sourceMappingURL=bundle74d24f4144e4242f4443.js.map
