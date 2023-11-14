@@ -403,12 +403,7 @@ const createTask = (e) => {
   const taskDueDate = document.querySelector("#input-add-task-due-date").value;
   const taskPriority = document.querySelector("#input-add-task-priority").value;
 
-  const newTask = new Task(
-    taskTitle,
-    taskDescription,
-    taskDueDate,
-    taskPriority
-  );
+  const newTask = task(taskTitle, taskDescription, taskDueDate, taskPriority);
   toDoList.getProject(currentProject).addTask(newTask);
   console.log(toDoList.projects[0].getTasks());
 
