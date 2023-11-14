@@ -2,11 +2,11 @@ import projectIconSrc from "../assets/images/feather.svg";
 import taskPriorityFlagSrc from "../assets/images/flag.svg";
 
 import task from "./task";
-import Project from "./project";
-import ToDoList from "./todolist";
+import project from "./project";
+import createToDoList from "./todolist";
 
-const toDoList = new ToDoList();
-const project1 = new Project("TaskStack-Project");
+const toDoList = createToDoList();
+const project1 = project("TaskStack-Project");
 const task1 = task(
   "Light & Dark mode",
   "User should be able to toggle a switch to make website either dark or light mode",
@@ -471,11 +471,11 @@ const openProject = (e) => {
 
 const renderProjects = () => {
   const projectsTitle = document.querySelector(".projects-title");
-  projectsTitle.textContent = `PROJECTS (${toDoList.projects.length})`;
+  projectsTitle.textContent = `PROJECTS (${toDoList.getProjects().length})`;
   const projectsList = document.querySelector(".projects-list");
   projectsList.textContent = ""; //reset projectList
 
-  toDoList.projects.forEach((project) => {
+  toDoList.getProjects().forEach((project) => {
     const projectContainer = document.createElement("li");
     projectContainer.classList.add(project.getName());
     const projectIcon = document.createElement("img");
@@ -509,7 +509,7 @@ closeAddProjectForm.addEventListener("click", () => {
 
 const createProject = (e) => {
   e.preventDefault();
-  const newProject = new Project(
+  const newProject = project(
     document.querySelector("#add-project-input").value
   );
   toDoList.addProject(newProject);

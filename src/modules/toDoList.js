@@ -1,26 +1,18 @@
-export default class ToDoList {
-  constructor() {
-    this.projects = [];
-  }
-  setProjects(projects) {
-    this.projects = projects;
-  }
+export default function createToDoList() {
+  let projects = [];
 
-  getProjects() {
-    return this.projects;
-  }
+  const setProjects = (newProjects) => (projects = newProjects);
+  const getProjects = () => projects;
 
-  getProject(projectName) {
-    return this.projects.find((project) => project.getName() === projectName);
-  }
-
-  addProject(newProject) {
-    this.projects.push(newProject);
-  }
-  removeProject(projectName) {
-    const projectToRemove = this.projects.find(
+  const getProject = (projectName) => {
+    return projects.find((project) => project.getName() === projectName);
+  };
+  const addProject = (newProject) => projects.push(newProject);
+  const removeProject = (projectName) => {
+    const projectToRemove = projects.find(
       (project) => project.getName() === projectName
     );
-    this.projects.splice(this.projects.indexOf(projectToRemove));
-  }
+    projects.splice(projects.indexOf(projectToRemove));
+  };
+  return { setProjects, getProjects, getProject, addProject, removeProject };
 }
